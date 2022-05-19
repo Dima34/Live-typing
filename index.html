@@ -47,7 +47,7 @@
             </section>
 
             <section class="container game-screen">
-                <iframe title="multiplication table game" align="middle" frameborder="no" delayedSrc = "https://www.siva28.com/games/timestable-final1/" src=""></iframe>
+                <iframe title="multiplication table game" align="middle" frameborder="no" data-delayedSrc = "https://www.siva28.com/games/timestable-final1/" src=""></iframe>
             </section>
 
             <section class="container">
@@ -198,17 +198,5 @@
     </footer>
 </body>
 
-<script>
-    function delayedFrameLoad() {
-        const delayedIFrames = document.querySelectorAll('iframe[delayedSrc]');
-
-        delayedIFrames.forEach(el=>{
-            el.setAttribute("src", el.getAttribute("delayedSrc"));
-        })        
-    }
-
-    document.addEventListener("DOMContentLoaded", ()=>{
-        setTimeout(()=>delayedFrameLoad(), 200)
-    });
-</script>
+<script src="./script.js" async="true"></script>
 </html>
