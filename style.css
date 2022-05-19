@@ -282,3 +282,15 @@ footer > .wrapper{
 .footer__bottom-links li:first-child a:after{
     display: none;
 }
+
+@media screen and (max-width: 1600px) {
+    .wrapper{
+        max-width: 1310px; /* 1280 + 30 padding px */
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .wrapper{
+        max-width: 1260px; /* 1230 + 30 padding px */
+    }
+}
