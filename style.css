@@ -328,6 +328,10 @@ footer > .wrapper{
         margin-bottom: 20px;
     }
 
+    h1,h2.h3{
+        text-align: center;
+    }
+
     aside > .container:not(.sidebar__nav){
         display: none;
     }
