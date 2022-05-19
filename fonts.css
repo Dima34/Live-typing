@@ -90,6 +90,15 @@ a{
 
 @media screen and (max-width: 1279px) {
     :root {
-        --header-text: 500 16px/16px "Poppins";
+        --h1: 600 28px/30px "Poppins";
+        --h2: 600 22px/23px "Poppins";
+        --header-text: 500 18px/18px "Poppins";
+    }
+}
+
+@media screen and (max-width: 660px) {
+    :root {
+        --button: 600 12px/normal "Poppins";
+
     }
 }
