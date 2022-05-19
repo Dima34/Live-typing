@@ -29,6 +29,7 @@
     --h3: 600 18px/normal "Poppins";
     --p: 400 16px/30px "Poppins";
     --header-text: 500 20px/20px "Poppins";
+    --footer-text: 400 16px/30px "Poppins";
 }
 
 h1,h2,p,a,li{
@@ -41,37 +42,42 @@ h1,h2,h3{
 }
 
 h1,h2{
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 } 
 
 h1{
     font: var(--h1);
     letter-spacing: 0.8px;
-    margin-top: 13px;
+    margin-top: 15px;
 }
 
 h2{
     font: var(--h2);
     letter-spacing: 0.6px;
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 h3{
     font: var(--h3);
     letter-spacing: 0.6px;
-    margin-bottom: 14px; 
-    margin-top: 15px;
+    margin: 10px 0 12px 0;
 }
 
 p{
     font: var(--p);
     color: var(--gray);
+    text-align: justify;
 }
 
 a{
     color: var(--white);
     text-decoration: none;
     display: inline-block;
+}
+
+.footer-text{
+    font: var(--footer-text);
+    color: var(--white);
 }
 
 .fw-400{
