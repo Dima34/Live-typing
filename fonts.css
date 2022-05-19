@@ -1,0 +1,84 @@
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./fonts/poppins-v20-latin-regular.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+  /* poppins-500 - latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+         url('./fonts/poppins-v20-latin-500.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/poppins-v20-latin-600.woff2') format('woff2') /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+
+:root {
+    --h1: 600 32px/35px "Poppins";
+    --h2: 600 24px/25px "Poppins";
+    --button: 600 18px/normal "Poppins";
+    --h3: 600 18px/normal "Poppins";
+    --p: 400 16px/30px "Poppins";
+    --header-text: 500 20px/20px "Poppins";
+}
+
+h1,h2,p,a,li{
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3{
+    color: var(--light_blue);
+}
+
+h1,h2{
+    margin-bottom: 23px;
+} 
+
+h1{
+    font: var(--h1);
+    letter-spacing: 0.8px;
+    margin-top: 13px;
+}
+
+h2{
+    font: var(--h2);
+    letter-spacing: 0.6px;
+    margin-top: 22px;
+}
+
+h3{
+    font: var(--h3);
+    letter-spacing: 0.6px;
+    margin-bottom: 14px; 
+    margin-top: 15px;
+}
+
+p{
+    font: var(--p);
+    color: var(--gray);
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.fw-400{
+    font-weight: 400;
+}
+
+.fw-500{
+   font-weight: 500; 
+}
+
