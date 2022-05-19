@@ -1,11 +1,12 @@
-    function delayedFrameLoad() {
-        const delayedIFrames = document.querySelectorAll('iframe[data-delayedSrc]');
 
-        delayedIFrames.forEach(el=>{
-            el.setAttribute("src", el.getAttribute("data-delayedSrc"));
-        })        
-    }
+    
+function delayedFrameLoad() {
+    const delayedIFrames = document.querySelectorAll('iframe[data-delayedSrc]');
 
-    document.addEventListener("DOMContentLoaded", ()=>{
-        setTimeout(()=>delayedFrameLoad(), 200)
-    });
+    delayedIFrames.forEach(el=>{
+        el.setAttribute("src", el.getAttribute("data-delayedSrc"));
+    })        
+}
+
+    setTimeout(()=>delayedFrameLoad(), 200)
+    
