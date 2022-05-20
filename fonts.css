@@ -70,7 +70,7 @@ a{
     :root {
         --h1: 600 28px/30px "Poppins";
         --h2: 600 22px/23px "Poppins";
-        --header-text: 500 18px/18px "Poppins";
+        /* --header-text: 500 18px/18px "Poppins"; */
     }
 }
 

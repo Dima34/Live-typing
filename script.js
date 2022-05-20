@@ -1,13 +1,37 @@
 
     
-    function delayedFrameLoad() {
-        const delayedIFrames = document.querySelectorAll('iframe[data-delayedSrc]');
+function delayedFrameLoad() {
+    const delayedIFrames = document.querySelectorAll('iframe[data-delayedSrc]');
 
-        delayedIFrames.forEach(el=>{
-            el.setAttribute("src", el.getAttribute("data-delayedSrc"));
-        })        
+    delayedIFrames.forEach(el=>{
+        el.setAttribute("src", el.getAttribute("data-delayedSrc"));
+    })        
+}
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    setTimeout(()=>delayedFrameLoad(), 200)
+});
+
+
+// Burger menu
+const burger = document.querySelector(".header__burger")
+const burgerNav = document.querySelector("header nav");
+const body = document.querySelector("body")
+let isOpened = false
+
+burger.addEventListener("click",()=>{
+    isOpened = !isOpened;
+    handleNav();
+});
+
+function handleNav(){
+    if (isOpened) {
+        burger.classList.add("active");
+        burgerNav.classList.add("active");
+        body.classList.add("scroll-lock")
+    } else{
+        burger.classList.remove("active");
+        burgerNav.classList.remove("active");
+        body.classList.remove("scroll-lock")
     }
-
-    document.addEventListener("DOMContentLoaded", ()=>{
-        setTimeout(()=>delayedFrameLoad(), 200)
-    });
+}
