@@ -1,0 +1,86 @@
+@import "./utils/_media-variables.scss";
+
+html {
+  /*---Colors---*/
+  --blue: #1f2641;
+  --light_blue: #313b77; 
+  --orange: #fcba04;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #090605;
+  --lightgray: #737373;
+  --background: #F1F1F1;
+
+  /*---Fonts---*/
+  --h1: 600 32px/35px "Poppins";
+  --h2: 600 24px/25px "Poppins";
+  --button: 600 18px/normal "Poppins";
+  --h3: 600 18px/normal "Poppins";
+  --p: 400 16px/30px "Poppins";
+  --header-text: 500 20px/20px "Poppins";
+  --footer-text: 400 16px/30px "Poppins";
+}
+
+
+h1,h2,p,a,li{
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3{
+  color: var(--light_blue);
+}
+
+h1,h2{
+  margin-bottom: 25px;
+} 
+
+h1{
+  font: var(--h1);
+  letter-spacing: 0.8px;
+  margin-top: 15px;
+}
+
+h2{
+  font: var(--h2);
+  letter-spacing: 0.6px;
+  margin-top: 20px;
+}
+
+h3{
+  font: var(--h3);
+  letter-spacing: 0.6px;
+  margin: 10px 0 12px 0;
+}
+
+p{
+  font: var(--p);
+  color: var(--gray);
+  text-align: justify;
+}
+
+a{
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-text{
+  font: var(--footer-text);
+  color: var(--white);
+}
+
+
+@media screen and (max-width: 1279px) {
+  html {
+    --h1: 600 28px/30px "Poppins";
+    --h2: 600 22px/23px "Poppins";
+    /* --header-text: 500 18px/18px "Poppins"; */
+  }
+}
+
+@media screen and (max-width: 660px) {
+  html {
+    --button: 600 12px/normal "Poppins";
+  }
+}
