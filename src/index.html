@@ -1,63 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnMultiplication</title>
-    <meta name="description" content="LearnMultiplication is a site where you can learn multiplication">
-    <link rel="stylesheet" href="./css/style.css">
-    <style>
-        @font-face {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: local(''),
-                url('./fonts/poppins-v20-latin-regular.woff2') format('woff2')
-        }
-        @font-face {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 500;
-            font-display: swap;
-            src: local(''),
-                url('./fonts/poppins-v20-latin-500.woff2') format('woff2')
-        }
-        @font-face {
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 600;
-            font-display: swap;
-            src: local(''),
-                url('./fonts/poppins-v20-latin-600.woff2') format('woff2')
-        }
-    </style>
+
+    @@include("./partials/head.html",{
+        title:"LearnMultiplication"
+    })
+
 </head>
 
 
 
 <body>
-    <header>
-        <div class="wrapper">
-            <button aria-label="toggle menu" class="header__burger">
-                <span></span>
-            </button>
-            <a href="/" class="header__logo">
-                <img width="400" height="32" src="./img/header__logo.svg" alt="Go to main page">
-            </a>
-            
-            <nav>
-                <ul class="header__nav">
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Tables</a></li>
-                    <li><a href="#">Worksheets</a></li>
-                    <li><a href="#">Charts</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    @@include("./partials/header.html")
     
     <div class="ads">
         <div class="ads__adplace">
@@ -192,53 +146,7 @@
         </aside>
     </main>
     
-    <footer>
-        <div class="wrapper">
-            <div class="footer__intro">
-                <a href="/" class="footer__logo"><img width="300" height="29" src="./img/footer__logo.svg" alt="go to main"></a>
-                <p class="footer-text">
-                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. non neque elit. Sed ut imperdiet nisi. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. non neque elit. Sed ut imperdiet nisi.
-                </p>
-            </div>
-            
-            <div class="footer__navigation">
-                <h2>Times Table</h2>
-                <nav class="navigation__container">
-                    <ul class="marked-list">
-                        <li><a class="footer-text" href="#">1 Times Table</a></li>
-                        <li><a class="footer-text" href="#">2 Times Table</a></li>
-                        <li><a class="footer-text" href="#">3 Times Table</a></li>
-                        <li><a class="footer-text" href="#">4 Times Table</a></li>
-                        <li><a class="footer-text" href="#">5 Times Table</a></li>
-                        <li><a class="footer-text" href="#">6 Times Table</a></li>
-                    </ul>
-                    <ul class="marked-list">
-                        <li><a class="footer-text" href="#">7 Times Table</a></li>
-                        <li><a class="footer-text" href="#">8 Times Table</a></li>
-                        <li><a class="footer-text" href="#">9 Times Table</a></li>
-                        <li><a class="footer-text" href="#">10 Times Table</a></li>
-                        <li><a class="footer-text" href="#">11 Times Table</a></li>
-                        <li><a class="footer-text" href="#">12 Times Table</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div class="footer__bottom">
-            <div class="wrapper">
-                <p class="footer-text">Copyright © 2022 - All rights reserved</p>
-                <ul class="footer__bottom-links">
-                    <li><a class="footer-text" href="#">Contact Us</a></li>
-                    <li><a class="footer-text" href="#">Privacy</a></li>
-                    <li><a class="footer-text" href="#">T.O.S</a></li>
-                    <li><a class="footer-text" href="#">Cookie</a></li>
-                    <li><a class="footer-text" href="#">Disclaimer</a></li>
-                    <li><a class="footer-text" href="#">About Us</a></li>
-                    <li><a class="footer-text" href="#">Blog</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    @@include("./partials/footer.html")
 
     <script src="./script.js" defer></script>
 </body>

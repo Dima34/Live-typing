@@ -97,14 +97,14 @@ a {
   color: var(--white);
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1359px) {
   html {
     --h1: 600 28px/30px "Poppins";
     --h2: 600 22px/23px "Poppins";
     /* --header-text: 500 18px/18px "Poppins"; */
   }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 650px) {
   html {
     --button: 600 12px/normal "Poppins";
   }

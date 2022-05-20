@@ -307,19 +307,19 @@ footer > .wrapper{
     height: auto;
 }
 
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: $desktop) {
     .wrapper{
         max-width: 1310px; /* 1280 + 30 padding px */
     }
 }
 
-@media screen and (max-width: 1359px) {
+@media screen and (max-width: $laptop) {
     .wrapper{
         max-width: 1260px; /* 1230 + 30 padding px */
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $tablet) {
     .scroll-lock{
         overflow: hidden;
     }
@@ -559,7 +559,7 @@ footer > .wrapper{
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: $mobile) {
     body{
         padding-top:67px;
     }

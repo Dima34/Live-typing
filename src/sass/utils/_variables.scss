@@ -71,7 +71,7 @@ a{
 }
 
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: $laptop) {
   html {
     --h1: 600 28px/30px "Poppins";
     --h2: 600 22px/23px "Poppins";
@@ -79,7 +79,7 @@ a{
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: $mobile) {
   html {
     --button: 600 12px/normal "Poppins";
   }
