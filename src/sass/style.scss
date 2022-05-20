@@ -198,7 +198,6 @@ main.wrapper{
 }
 
 footer{
-    margin-top: 30px;
     position: relative;
     overflow: hidden;
 }
@@ -307,6 +306,68 @@ footer > .wrapper{
     height: auto;
 }
 
+.cards-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 20px;
+}
+
+.card{
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover h3{
+    color: var(--light_blue);
+}
+
+.card > img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 290/180;
+}
+
+.card__content{
+    padding: 0 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card h3{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: var(--black);
+}
+
+.card__footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.card__score-container{
+    display: flex;
+    align-items: center;
+}
+
+.card__score-container p{
+    font-weight: 600;
+}
+
+.card__score-container > img{
+    display: block;
+    margin-right: 5px;
+}
+
 @media screen and (max-width: $desktop) {
     .wrapper{
         max-width: 1310px; /* 1280 + 30 padding px */
@@ -316,6 +377,10 @@ footer > .wrapper{
 @media screen and (max-width: $laptop) {
     .wrapper{
         max-width: 1260px; /* 1230 + 30 padding px */
+    }
+
+    .cards-grid{
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -560,6 +625,9 @@ footer > .wrapper{
 }
 
 @media screen and (max-width: $mobile) {
+    h1,h2,h3{
+        text-align: center;
+    }
     body{
         padding-top:67px;
     }
@@ -604,5 +672,11 @@ footer > .wrapper{
 
     .frame-holder__container h2{
         margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cards-grid{
+        grid-template-columns: 1fr;
     }
 }
