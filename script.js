@@ -1,4 +1,15 @@
+const frameHolders = document.querySelectorAll(".frame-holder");
 
+frameHolders.forEach(holder=>{
+    const playBtn = holder.querySelector("button");
+    const frameSrc = holder.getAttribute("data-IFrameSrc");
+
+    playBtn.onclick = () =>{
+        holder.innerHTML = `
+        <iframe style="border: 0; width: 100%; height: 100%;" loading="lazy" title="multiplication table game" src="${frameSrc}"></iframe>
+        `
+    }
+})
     
 function delayedFrameLoad() {
     const delayedIFrames = document.querySelectorAll('iframe[data-delayedSrc]');

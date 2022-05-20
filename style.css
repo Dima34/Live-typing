@@ -26,10 +26,6 @@ ul{
     padding: 0;
 }
 
-.scroll-lock{
-    overflow: hidden;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -95,8 +91,8 @@ header .wrapper{
     border-radius: 5px;
 }
 
-.header_burger{
-    display: none
+.header__burger{
+    display: none;
 }
 
 .header__nav a:hover{
@@ -124,9 +120,42 @@ main.wrapper{
     column-gap: 30px;
 }
 
-.game-screen iframe{
+.frame-holder{
     width: 100%;
     aspect-ratio: 910/683;
+    background: var(--blue);
+    position: relative;
+}
+
+.frame-holder__container{
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 30px);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame-holder__container button{
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.frame-holder__container button:hover path{
+    fill: var(--orange);
+}
+
+.frame-holder__container h2{
+    color: var(--white);
+    text-transform: capitalize;
+    cursor: default;
 }
 
 .grid{
@@ -324,6 +353,10 @@ footer > .wrapper{
 }
 
 @media screen and (max-width: 1024px) {
+    .scroll-lock{
+        overflow: hidden;
+    }
+
     body{
         padding-top: 82px;
     }
@@ -363,7 +396,7 @@ footer > .wrapper{
         cursor: pointer;
         display: flex;
         position: absolute;
-        left: 30px;
+        left: 15px;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -373,7 +406,7 @@ footer > .wrapper{
         width: 100%;
         height: 3px;
         background: #fff;
-        transition: 0.3s linear;
+        transition: 0.25s linear;
     }
 
     .header__burger span::after, .header__burger span::before {
@@ -385,7 +418,7 @@ footer > .wrapper{
         width: 100%;
         height: 3px;
         background: #fff;
-        transition: 0.3s linear;
+        transition: 0.25s linear;
     }
 
     .header__burger span::before {
@@ -415,7 +448,7 @@ footer > .wrapper{
         background: rgba(0, 0, 0, 0.7);
         opacity: 0;
         visibility: hidden;
-        transition: .3s linear;
+        transition: .25s linear;
     }
 
     header nav.active{
@@ -432,7 +465,7 @@ footer > .wrapper{
         overflow: auto;
         position: relative;
         transform: translate(-100%, 0);
-        transition: .3s linear;
+        transition: .25s linear;
     }
 
     nav.active .header__nav{
@@ -548,7 +581,15 @@ footer > .wrapper{
         text-align: right;
     }
 
+    .frame-holder__container button{
+        width: 64px;
+        height: 64px;
+        margin-bottom: 15px;
+    }
     
+    .frame-holder__container h2{
+        font: var(--h3);
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -558,6 +599,14 @@ footer > .wrapper{
 
     .wrapper{
         padding: 0 15px;
+    }
+
+    .header{
+        padding: 20px 0;
+    }
+
+    .header__logo img{
+        max-width: 200px;
     }
 
     .container{
@@ -584,5 +633,9 @@ footer > .wrapper{
     .button-small img{
         display: block;
         margin-right: 10px;
+    }
+
+    .frame-holder__container h2{
+        margin-top: 0px;
     }
 }
