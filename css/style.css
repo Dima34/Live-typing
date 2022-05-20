@@ -194,8 +194,7 @@ main.wrapper {
 
 .frame-holder {
   width: 100%;
-  aspect-ratio: 910/683;
-  background: var(--blue);
+  aspect-ratio: 910/634;
   position: relative;
 }
 

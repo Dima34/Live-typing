@@ -5,9 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
   <style>
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/poppins-v20-latin-regular.woff2') format('woff2')
+    }
+
+    @font-face {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: local(''),
+        url('./fonts/poppins-v20-latin-500.woff2') format('woff2')
+    }
+
     * {
       box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
     }
 
     .container {
@@ -16,10 +39,10 @@
     }
 
     .gamezone__results {
-      font-size: 34px;
-      line-height: 34px;
+      font-size: 2.833vw;
+      line-height: 2.833vw;
       margin: 0;
-      margin-bottom: 6px;
+      margin-bottom: 0.500vw;
     }
 
     .mt-table {
@@ -28,7 +51,6 @@
       width: 100%;
       border-left: 2px solid #000;
       border-top: 2px solid #000;
-
     }
 
     .trow {
@@ -37,8 +59,8 @@
     }
 
     .tcell {
-      padding: 9px;
-      font-size: 23px;
+      padding: 0.750vw;
+      font-size: 1.917vw;
       cursor: default;
       border-right: 2px solid #000;
       border-bottom: 2px solid #000;
@@ -68,19 +90,19 @@
     }
 
     .game {
-      width: 1200px;
-      height: 835px;
+      width: 100vw;
+      height: 69.583vw;
       display: flex;
       justify-content: center;
-      padding-top: 77px;
+      padding-top: 6.417vw;
       background: url(img/Desk.webp) center no-repeat;
       background-size: cover;
       margin: 0 auto;
     }
 
     .gamezone {
-      width: 945px;
-      height: 630px;
+      width: 78.750vw;
+      height: 52.500vw;
     }
   </style>
 
@@ -103,133 +125,133 @@
   <script>
     'use strict';
 
-var MultiplicationTable = function() {
-  this.resultContainer = document.querySelector('.gamezone__results');
-  this.tableData = [];
-  this.highlightedCells = [];
+    var MultiplicationTable = function () {
+      this.resultContainer = document.querySelector('.gamezone__results');
+      this.tableData = [];
+      this.highlightedCells = [];
 
-  this.createNewElement = function(el, className) {
-    var el = document.createElement(el);
-    el.classList.add(className);
-    return el;
-  }
-
-  this.distributeCells = function(table) {
-    for (var row = 0; row < 13; row++) {
-      var createRow = this.createNewElement('tr', 'trow');
-      var trow = [];
-      for (var cell = 0; cell < 13; cell++) {
-        var createCell = this.createNewElement('td', 'tcell');
-        // var resultText = row * cell + ' cells colored';
-        createCell.dataset.row = row;
-        createCell.dataset.cell = cell;
-        createCell.dataset.result = row * cell;
-        // createCell.setAttribute('title', resultText);
-
-        if(row == 0 || cell == 0){
-          createCell.innerHTML = row + cell;
-          createCell.classList.add("is-corner");
-        }else{
-          createCell.innerHTML = row * cell;
-        }
-        if(row == 0 && cell == 0){
-          createCell.classList.add("is-zero");
-          createCell.innerHTML = "X";
-        }
-
-
-        createRow.appendChild(createCell);
-        trow.push(createCell);
+      this.createNewElement = function (el, className) {
+        var el = document.createElement(el);
+        el.classList.add(className);
+        return el;
       }
-      this.tableData.push(trow);
-      table.appendChild(createRow);
-    }
-  }
 
-  this.createTable = function() {
-    var table = this.createNewElement('table', 'mt-table');
-    table.setAttribute('cellspacing', '0');
-    this.distributeCells(table);
-    return table;
-  }
+      this.distributeCells = function (table) {
+        for (var row = 0; row < 13; row++) {
+          var createRow = this.createNewElement('tr', 'trow');
+          var trow = [];
+          for (var cell = 0; cell < 13; cell++) {
+            var createCell = this.createNewElement('td', 'tcell');
+            // var resultText = row * cell + ' cells colored';
+            createCell.dataset.row = row;
+            createCell.dataset.cell = cell;
+            createCell.dataset.result = row * cell;
+            // createCell.setAttribute('title', resultText);
 
-  this.render = function() {
-    var container = document.querySelector('.gamezone__table');
-    container.appendChild(this.createTable());
-  }
+            if (row == 0 || cell == 0) {
+              createCell.innerHTML = row + cell;
+              createCell.classList.add("is-corner");
+            } else {
+              createCell.innerHTML = row * cell;
+            }
+            if (row == 0 && cell == 0) {
+              createCell.classList.add("is-zero");
+              createCell.innerHTML = "X";
+            }
 
-  this.writeResult = function(row, cell) {
-    this.resultContainer.innerText = row + ' × ' + cell + ' = ' + row * cell;
-  }
 
-  this.highlightCells = function(row, cell, el) {
-    var arrayList = this.tableData,
-    rowNumber = row,
-    cellNumber = cell,
+            createRow.appendChild(createCell);
+            trow.push(createCell);
+          }
+          this.tableData.push(trow);
+          table.appendChild(createRow);
+        }
+      }
 
-    // corner higlight
-    vertNum = arrayList[rowNumber][0],
-    horizNum = arrayList[0][cellNumber];
-    vertNum.classList.add('is-data');
-    horizNum.classList.add('is-data');
+      this.createTable = function () {
+        var table = this.createNewElement('table', 'mt-table');
+        table.setAttribute('cellspacing', '0');
+        this.distributeCells(table);
+        return table;
+      }
 
-    // selected highlight
-    el.classList.add('is-result');
+      this.render = function () {
+        var container = document.querySelector('.gamezone__table');
+        container.appendChild(this.createTable());
+      }
 
-    for (var i = 0; i < arrayList.length; i++) {
-      if (i <= rowNumber) {
-        for (var j = 0; j < arrayList[i].length; j++) {
-          if (j <= cellNumber) {
-            if (j == cellNumber || i == rowNumber) {
-              arrayList[i][j].classList.add('is-zone-border');
+      this.writeResult = function (row, cell) {
+        this.resultContainer.innerText = row + ' × ' + cell + ' = ' + row * cell;
+      }
+
+      this.highlightCells = function (row, cell, el) {
+        var arrayList = this.tableData,
+          rowNumber = row,
+          cellNumber = cell,
+
+          // corner higlight
+          vertNum = arrayList[rowNumber][0],
+          horizNum = arrayList[0][cellNumber];
+        vertNum.classList.add('is-data');
+        horizNum.classList.add('is-data');
+
+        // selected highlight
+        el.classList.add('is-result');
+
+        for (var i = 0; i < arrayList.length; i++) {
+          if (i <= rowNumber) {
+            for (var j = 0; j < arrayList[i].length; j++) {
+              if (j <= cellNumber) {
+                if (j == cellNumber || i == rowNumber) {
+                  arrayList[i][j].classList.add('is-zone-border');
+                }
+              }
+              this.highlightedCells.push(arrayList[i][j]);
             }
           }
-          this.highlightedCells.push(arrayList[i][j]);
         }
       }
-    }
-  }
 
-  this.dimCells = function() {
-    if (this.highlightedCells != 0) {
-      for (var i = 0; i < this.highlightedCells.length; i++) {
-        this.highlightedCells[i].classList.remove('is-zone-border', 'is-result', 'is-data');
+      this.dimCells = function () {
+        if (this.highlightedCells != 0) {
+          for (var i = 0; i < this.highlightedCells.length; i++) {
+            this.highlightedCells[i].classList.remove('is-zone-border', 'is-result', 'is-data');
+          }
+        }
       }
-    }
-  }
 
-  this.parseCellData = function(row, cell, el) {
-    this.dimCells();
-    this.highlightCells(row, cell, el);
-    
-  }
+      this.parseCellData = function (row, cell, el) {
+        this.dimCells();
+        this.highlightCells(row, cell, el);
 
-  this.displayResult = function(e) {
-    if (e.target.nodeName.toLowerCase() === 'td') {
-      var row = e.target.dataset.row,
-        cell = e.target.dataset.cell;
-      if(row != 0 && cell != 0){
-        this.writeResult(row, cell);
-        this.parseCellData(row, cell, e.target);
       }
-    }
-  }
 
-  this.addEvents = function() {
-    var table = document.querySelector('.mt-table');
-    table.addEventListener('mouseover', this.displayResult.bind(this));
-  }
+      this.displayResult = function (e) {
+        if (e.target.nodeName.toLowerCase() === 'td') {
+          var row = e.target.dataset.row,
+            cell = e.target.dataset.cell;
+          if (row != 0 && cell != 0) {
+            this.writeResult(row, cell);
+            this.parseCellData(row, cell, e.target);
+          }
+        }
+      }
 
-  this.init = function() {
-    this.render();
-    table.addEvents();
-  }
-};
+      this.addEvents = function () {
+        var table = document.querySelector('.mt-table');
+        table.addEventListener('mouseover', this.displayResult.bind(this));
+      }
 
-var table = new MultiplicationTable();
+      this.init = function () {
+        this.render();
+        table.addEvents();
+      }
+    };
 
-table.init();
-table.highlightCells(6, 6, table.tableData[6][6]);
+    var table = new MultiplicationTable();
+
+    table.init();
+    table.highlightCells(6, 6, table.tableData[6][6]);
   </script>
 </body>
 
