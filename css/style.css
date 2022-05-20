@@ -470,6 +470,38 @@ footer > .wrapper {
   margin-right: 5px;
 }
 
+.share-block {
+  padding: 20px;
+  background: var(--blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.share-block h2 {
+  margin: 0;
+  color: var(--white);
+}
+
+.share-block__stat {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.share-block__stat p {
+  padding-left: 5px;
+  color: var(--white);
+}
+
+.share-block__stats {
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 1599px) {
   .wrapper {
     max-width: 1310px;
@@ -772,6 +804,15 @@ footer > .wrapper {
 
   .frame-holder__container h2 {
     margin-top: 0px;
+  }
+
+  .share-block {
+    flex-direction: column;
+  }
+
+  .share-block__stats {
+    margin: 0;
+    margin-top: 15px;
   }
 }
 @media screen and (max-width: 550px) {
