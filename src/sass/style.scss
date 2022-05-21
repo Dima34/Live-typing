@@ -385,8 +385,37 @@ footer > .wrapper{
     display: flex;
     align-items: center;
     margin-left: 15px;
-    
 }
+
+.share-block__stat input{
+    display: none;
+}
+
+.block__stat-like{
+    transition: .3s linear;
+}
+
+.share-block__stat input:checked + .block__stat-like{
+    animation: rotate .3s;
+}
+
+.share-block__stat:nth-child(2) .block__stat-like img{
+    transform: rotate(180deg);
+}
+
+@keyframes rotate{
+    0%{
+      transform :scale(0.5) rotate(179deg);
+    }
+    
+    75%{
+      transform :scale(1.1) rotate(0deg);
+    }
+    
+    100%{
+      transform : scale(1.0);
+    }
+  }
 
 .share-block__stat p{
     padding-left: 5px;
