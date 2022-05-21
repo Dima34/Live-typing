@@ -99,7 +99,6 @@
       justify-content: center;
       padding-top: 6.417vw;
       background: url(img/Desk.webp) center no-repeat;
-      /* background: url(img/workspace.png) center no-repeat; */
 
       background-size: contain;
       margin: 0 auto;
@@ -108,6 +107,43 @@
     .gamezone {
       width: 74.5vw;
       height: 52.500vw;
+    }
+
+    @media screen and (max-width: 650px){
+      .game{
+        background: 0;
+        padding-top: 0;
+      }
+
+      .gamezone__results{
+        color: #1f2641;
+        font-size: 4.633vw;
+        line-height: normal;
+      }
+
+      .gamezone{
+        width: 100vw;
+      }
+
+      .tcell {
+        font-size: 2vw;
+      }
+
+      .mt-table {
+        border-left: 1px solid #000;
+        border-top: 1px solid #000;
+      }
+
+      .tcell {
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+      }
+    }
+
+    @media screen and (max-width: 340px){
+      .gamezone__results{
+        margin-bottom: -1vw;
+      }
     }
   </style>
 
