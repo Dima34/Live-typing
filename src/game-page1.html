@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @@include("./partials/head.html",{
+        title:"LearnMultiplication"
+    })
+
+</head>
+
+
+
+<body>
+    @@include("./partials/header.html")
+    
+    <div class="ads">
+        <div class="ads__adplace">
+            <img loading = "lazy" src="./img/banner-h.webp" alt="ad" width="970" height="250">
+        </div>
+    </div>
+
+    <main class="wrapper">
+        <div class="content">
+            <section class="container">
+                <h2 class="visually-hidden">Share through socials</h2>
+                <div class="share-grid">
+                    <a href="#" class="button-small">
+                        <img width="15" height="15"  src="./img/classroom-ico.svg" alt="classroom">
+                        Classroom
+                    </a>
+                    <a href="#" class="button-small">
+                        <img width="15" height="15"  src="./img/symbaloo-ico.svg" alt="symbaloo">
+                        Symbaloo
+                    </a>
+                    <a href="#" class="button-small">
+                        <img width="15" height="15"  src="./img/fb-ico.svg" alt="facebook">
+                        Facebook
+                    </a>
+                    <a href="#" class="button-small">
+                        <img width="15" height="15"  src="./img/pinterest-ico.svg" alt="pinterest">
+                        Pinterest
+                    </a>
+                    <a href="#" class="button-small">
+                        <img width="15" height="15"  src="./img/mail-ico.svg" alt="| money_without_trailing_zeros">
+                        Email
+                    </a>
+                </div>
+                
+            </section> 
+
+            <section class="container">
+                <h2 class="visually-hidden">Game</h2>
+                @@include("./partials/game1.html")
+            </section>
+
+            <section class="share-block container">
+                <h2>12 Times Multiplication Table</h2>
+                <div class="share-block__stats">
+                    <div class="share-block__stat">
+                        <input type="checkbox" id="like">   
+                        <label class="block__stat-like" for="like">
+                            <img width="45" height="45" src="./img/rounded-like.svg" alt="button">
+                        </label>
+                        <p>2.6 k</p>
+                    </div>
+
+                    <div class="share-block__stat">
+                        <input type="checkbox" id="dislike">   
+                        <label class="block__stat-like" for="dislike">
+                            <img width="45" height="45" src="./img/rounded-like.svg" alt="button">
+                        </label>
+                        <p>1.4 k</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h2>Related  Games</h2>
+                <div class="cards-grid">
+                    @@include("./partials/card.html")
+                    @@include("./partials/card.html")
+                    @@include("./partials/card.html")
+                    @@include("./partials/card.html")
+                    @@include("./partials/card.html")
+                    @@include("./partials/card.html")
+                </div>
+            </section>  
+
+            <section class="container">
+                <h2>Description</h2>
+                <p>
+                    Choose the table you want to practice from the following. First you can practice the multiplication facts in sequence and once you have got the hang of that you can practice all the sums in random order for each table. If you have forgotten any answers.
+                </p>
+            </section> 
+        </div>
+        <aside>
+            <section class="container">
+                <h2 class="visually-hidden">Out partners</h2>
+                <div class="banner-v">
+                    <img loading = "lazy" src="./img/banner-v.webp" width="300" height="600" alt="ad">
+                </div>
+            </section>
+
+            <section class="sidebar__nav container">
+                <h3>Category</h3>
+                <ul class="marked-list">
+                    <li><a class="p" href="#">Multiplication Table 1</a></li>
+                    <li><a class="p" href="#">Multiplication Table 2</a></li>
+                    <li><a class="p" href="#">Multiplication Table 3</a></li>
+                    <li><a class="p" href="#">Multiplication Table 4</a></li>
+                </ul>
+            </section>
+
+            <section class="container">
+                <h2 class="visually-hidden">Out partners</h2>
+                <div class="banner-v">
+                    <img loading = "lazy" src="./img/banner-v.webp" width="300" height="600" alt="ad">
+                </div>
+            </section>
+        </aside>
+    </main>
+    
+    @@include("./partials/footer.html")
+    @@include("./partials/scripts.html")
+
+</body>
+
+</html>

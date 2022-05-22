@@ -19,17 +19,30 @@ function getElementHeight(el){
 }
 
 function handleResize(){
-    holderWidth = Number(getElementWidth(holder));
-    
-    console.log("resize handle " + holderWidth);
+    let widthAvailable = Number(getElementWidth(holder));
+    let heightAvailable = window.innerHeight - 100;    
+
+    let acceptable = findAcceptableH(widthAvailable, heightAvailable);
+
+    iframe.style.height = acceptable.height + "px";
+    iframe.style.width = acceptable.width + "px";
+}
+
+function findAcceptableH(width, height){
+    let acceptibleH, acceptibleW
+
+    for (let index = width; index > 0; index--) {
+        if(index / frameRatio <= height){
+            acceptibleH = index / frameRatio,
+            acceptibleW = index
+            break
+        }        
+    }
 
 
-    if(holderWidth < frameStartWidth){
-        iframe.style.width = "100%";
-        iframe.style.height = holderWidth / frameRatio + "px";
-    } else{
-        iframe.style.width = frameStartWidth + "px";
-        iframe.style.height = frameStartHeight + "px";
+    return {
+        height :acceptibleH, 
+        width: acceptibleW
     }
 }
 
@@ -37,4 +50,7 @@ handleResize();
 
 window.addEventListener('resize', handleResize, false);
 window.addEventListener('orientationchange', handleResize, false);
+
+
+
 
