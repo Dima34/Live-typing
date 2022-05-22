@@ -1,9 +1,14 @@
 const holder = document.querySelector(".frame-holder");
 const iframe = document.querySelector(".frame-holder iframe");
 
-const frameStartWidth = Number(getElementWidth(iframe));
-const frameStartHeight = Number(getElementHeight(iframe));
+const frameStartWidth = Number(iframe.getAttribute("width"));
+const frameStartHeight = Number(iframe.getAttribute("height"));
 const frameRatio = frameStartWidth / frameStartHeight;
+
+
+iframe.removeAttribute("width");
+iframe.removeAttribute("height");
+
 
 function getElementWidth(el){
     return getComputedStyle(el).width.slice(0,-2);
@@ -15,12 +20,16 @@ function getElementHeight(el){
 
 function handleResize(){
     holderWidth = Number(getElementWidth(holder));
-    frameWidth = Number(getElementWidth(iframe));
-    console.log("resize handle");
     
+    console.log("resize handle " + holderWidth);
+
+
     if(holderWidth < frameStartWidth){
-        iframe.setAttribute("width", holderWidth);
-        iframe.setAttribute("height", holderWidth / frameRatio);
+        iframe.style.width = "100%";
+        iframe.style.height = holderWidth / frameRatio + "px";
+    } else{
+        iframe.style.width = frameStartWidth + "px";
+        iframe.style.height = frameStartHeight + "px";
     }
 }
 
@@ -28,3 +37,4 @@ handleResize();
 
 window.addEventListener('resize', handleResize, false);
 window.addEventListener('orientationchange', handleResize, false);
+
