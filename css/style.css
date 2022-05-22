@@ -193,9 +193,9 @@ main.wrapper {
 }
 
 .frame-holder {
-  width: 100%;
-  aspect-ratio: 910/634;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .frame-holder__container {

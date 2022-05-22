@@ -87,10 +87,10 @@ main.wrapper {
     column-gap: 30px;
 }
 
-.frame-holder {
-    width: 100%;
-    aspect-ratio: 910/634;
+.frame-holder{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .frame-holder__container {
