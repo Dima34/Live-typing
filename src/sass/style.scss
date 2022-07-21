@@ -19,6 +19,7 @@
 
 .wrapper {
     max-width: 1530px;
+    // width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -28,6 +29,12 @@
     background: var(--white);
     border-radius: 8px;
     margin-bottom: 30px;
+
+    img{
+        width: 100%;
+        height: auto;
+        
+    }
 }
 
 header {

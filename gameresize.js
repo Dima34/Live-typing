@@ -5,6 +5,11 @@ const frameStartWidth = Number(iframe.getAttribute("width"));
 const frameStartHeight = Number(iframe.getAttribute("height"));
 const frameRatio = frameStartWidth / frameStartHeight;
 
+// Set default styles
+iframe.style.position = "absolute";
+iframe.style.left = "0px";
+iframe.style.top = "0px";
+
 
 iframe.removeAttribute("width");
 iframe.removeAttribute("height");
@@ -22,8 +27,11 @@ function handleResize(){
     let widthAvailable = Number(getElementWidth(holder));
     let heightAvailable = window.innerHeight - 100;    
 
+    console.log(`with available` + widthAvailable);
+
     let acceptable = findAcceptableH(widthAvailable, heightAvailable);
 
+    holder.style.height = acceptable.height + "px";
     iframe.style.height = acceptable.height + "px";
     iframe.style.width = acceptable.width + "px";
 }
@@ -39,7 +47,6 @@ function findAcceptableH(width, height){
         }        
     }
 
-
     return {
         height :acceptibleH, 
         width: acceptibleW
@@ -50,7 +57,3 @@ handleResize();
 
 window.addEventListener('resize', handleResize, false);
 window.addEventListener('orientationchange', handleResize, false);
-
-
-
-
