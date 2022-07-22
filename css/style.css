@@ -135,7 +135,7 @@ a {
   border-radius: 8px;
   margin-bottom: 30px;
 }
-.container img {
+.container > img {
   width: 100%;
   height: auto;
 }
