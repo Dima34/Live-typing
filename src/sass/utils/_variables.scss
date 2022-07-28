@@ -2,24 +2,24 @@
 
 html {
   /*---Colors---*/
-  --blue: #1f2641;
-  --light_blue: #313b77; 
-  --orange: #fcba04;
   --white: #ffffff;
-  --black: #000000;
-  --gray: #090605;
-  --lightgray: #737373;
-  --background: #F1F1F1;
-  --border: #D8D8D8;
+  --black-1: #000;
+  --black: #2d2d2d;
+  --gray: #f5f8fa;
+  --lightgray: #777777;
+  --lightgray-1: #a0a0a0;
+  --background: #f5f8fa;
+  --red: #fe5a3f;
+  --blue : #2a7fff;
 
   /*---Fonts---*/
-  --h1: 600 32px/35px "Poppins";
-  --h2: 600 24px/25px "Poppins";
-  --button: 600 18px/normal "Poppins";
-  --h3: 600 18px/normal "Poppins";
-  --p: 400 16px/30px "Poppins";
-  --header-text: 500 20px/20px "Poppins";
-  --footer-text: 400 16px/30px "Poppins";
+  --h1: 700 72px/75px "Roboto";
+  --h2: 700 24px/28px "Roboto";
+  --button: 700 18px/normal "Roboto";
+  --h3: 700 18px/normal "Roboto";
+  --p: 400 16px/24.9px "Roboto";
+  --header-text: 500 20px/20px "Roboto";
+  --footer-text: 400 16px/30px "Roboto";
 }
 
 
@@ -29,38 +29,31 @@ h1,h2,p,a,li{
 }
 
 h1,h2,h3{
-  color: var(--light_blue);
+  color: var(--black);
 }
-
-h1,h2{
-  margin-bottom: 25px;
-} 
 
 h1{
   font: var(--h1);
   letter-spacing: 0.8px;
-  margin-top: 15px;
 }
 
-h2{
+h2, .h2{
   font: var(--h2);
   letter-spacing: 0.6px;
-  margin-top: 20px;
 }
 
 h3{
   font: var(--h3);
   letter-spacing: 0.6px;
-  margin: 10px 0 12px 0;
 }
 
 p{
   font: var(--p);
-  color: var(--gray);
+  color: var(--black);
   text-align: justify;
 }
 
-a{
+a{ 
   color: var(--white);
   text-decoration: none;
   display: inline-block;
@@ -74,14 +67,14 @@ a{
 
 @media screen and (max-width: $laptop) {
   html {
-    --h1: 600 28px/30px "Poppins";
-    --h2: 600 22px/23px "Poppins";
-    /* --header-text: 500 18px/18px "Poppins"; */
+    --h1: 600 54px/56px "Roboto";
+    --h2: 600 22px/23px "Roboto";
   }
 }
 
 @media screen and (max-width: $mobile) {
   html {
-    --button: 600 12px/normal "Poppins";
+    --h1: 600 28px/30px "Roboto";
+    --h2: 600 18px/20px "Roboto";
   }
 }

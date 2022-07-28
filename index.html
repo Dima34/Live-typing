@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LearnMultiplication</title>
+<title>Speed typing</title>
 
 <meta name="description" content="LearnMultiplication is a site where you can learn multiplication">
 <link rel="stylesheet" href="./css/style.css">
 <style>
     @font-face {
-        font-family: 'Poppins';
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
         src: local(''),
-            url('./fonts/poppins-v20-latin-regular.woff2') format('woff2')
+            url('./fonts/roboto-v30-latin-regular.woff2') format('woff2')
     }
 
     @font-face {
-        font-family: 'Poppins';
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
         font-display: swap;
         src: local(''),
-            url('./fonts/poppins-v20-latin-500.woff2') format('woff2')
+            url('./fonts/roboto-v30-latin-500.woff2') format('woff2')
     }
 
     @font-face {
-        font-family: 'Poppins';
+        font-family: 'Roboto';
         font-style: normal;
         font-weight: 600;
         font-display: swap;
         src: local(''),
-            url('./fonts/poppins-v20-latin-600.woff2') format('woff2')
+            url('./fonts/roboto-v30-latin-700.woff2') format('woff2')
     }
 </style>
 
 </head>
-
-
 
 <body>
     <header>
@@ -49,239 +48,203 @@
       <span></span>
     </button>
     <a href="/" class="header__logo">
-      <img width="400" height="32" src="./img/header__logo.svg" alt="Go to main page">
+      <img width="400" height="32" src="./img/logo.png" alt="Go to main page">
     </a>
     
     <nav>
       <ul class="header__nav">
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">Games</a></li>
-        <li><a href="#">Tables</a></li>
-        <li><a href="#">Worksheets</a></li>
-        <li><a href="#">Charts</a></li>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2 </a></li>
+        <li><a href="#">Menu 3</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
-    
+
     <div class="ads">
         <div class="ads__adplace">
-            <img loading = "lazy" src="./img/banner-h.webp" alt="ad" width="970" height="250">
+            <img loading="lazy" src="./img/banner-h.webp" alt="ad" width="970" height="250">
         </div>
     </div>
 
-    <main class="wrapper">
-        <div class="content">
-            <section class="container">
-                <h1>Learn your multiplication tables</h1>
-                <p>
-                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. non neque elit. Sed ut imperdiet nisi. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                </p>
-            </section>
+    <main>
+        <div class="wrapper">
+            <div class="splitted-content">
+                <section class="container game">
+                    <h1 class="game__title">Typing Speed Test</h1>
+                    <p class="game__subtitle h2">Test your typing skills</p>
 
-            <section class="container">
-                <h2 class="visually-hidden">Game</h2>
-                <div class="frame-holder">            
-    <iframe id="playframe" title = "Table window" width="1200" height="855" style="border: 0;" src="./game.html" ></iframe>
-</div>
-            </section>
+                    <div class="game__counters">
+                        <div class="counters__counter counters__seconds-counter">
+                            <svg viewBox="0 0 100 100" width="110" height="110">
+                                <circle id = "circleTimeCounter" cx="50" cy="50" r="48" fill="none" stroke="#fe5a3f" stroke-width="4" stroke-dasharray="332px" style="transform: rotate(-90deg); transform-origin: center center; transition: all 1s linear 0s; stroke-dashoffset: 110.667px;"></circle>
+                            </svg>
+                            <p id="secondsRemainCounter">60</p>
+                            <p>seconds</p>
+                        </div>
+                        
+                        <div class="counters__group">
+                            <div class="counters__counter">
+                                <p id="wordsMinCounter">0</p>
+                                <p>words/min</p>
+                            </div>
+                    
+                            <div class="counters__counter">
+                                <p id="charsMinCounter">0</p>
+                                <p>chars/min</p>
+                            </div>
+                    
+                            <div class="counters__counter">
+                                <p id="accuracyCounter">0</p>
+                                <p>% accuracy</p>
+                            </div>
+                        </div>                        
+                    </div>
 
-            <section class="container">
-                <h2 class="visually-hidden">Share through socials</h2>
-                <div class="share-grid">
-                    <a href="#" class="button-small">
-                        <img width="15" height="15"  src="./img/classroom-ico.svg" alt="classroom">
-                        Classroom
-                    </a>
-                    <a href="#" class="button-small">
-                        <img width="15" height="15"  src="./img/symbaloo-ico.svg" alt="symbaloo">
-                        Symbaloo
-                    </a>
-                    <a href="#" class="button-small">
-                        <img width="15" height="15"  src="./img/fb-ico.svg" alt="facebook">
-                        Facebook
-                    </a>
-                    <a href="#" class="button-small">
-                        <img width="15" height="15"  src="./img/pinterest-ico.svg" alt="pinterest">
-                        Pinterest
-                    </a>
-                    <a href="#" class="button-small">
-                        <img width="15" height="15"  src="./img/mail-ico.svg" alt="| money_without_trailing_zeros">
-                        Email
-                    </a>
-                </div>
+                    <div class="game__text-container">
+                        <div class="game__text-holder">
+                            <p id = "typedText" style="color: red;"></p>
+                            <p id="typeCoursor"></p>
+                            <p id = "needToTypeText"></p>
+                        </div>
                 
-            </section>
-
-            <section class="container">
-                <h2>Which multiplication table do you want to learn?</h2>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. non neque elit. Sed ut imperdiet nisi. This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-                <div class="grid">
-                    <a href="#" class="button">
-                        1 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        2 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        3 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        4 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        5 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        6 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        7 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        8 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        9 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        10 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        11 Times Table
-                    </a>
-                    <a href="#" class="button">
-                        12 Times Table
-                    </a>
-                </div>
-            </section>
-
-            <section class="container">
-                <h2>Which multiplication table do you want to learn?</h2>
-                <p>
-                    Choose the table you want to practice from the following. First you can practice the multiplication facts in sequence and once you have got the hang of that you can practice all the sums in random order for each table. If you have forgotten any answers, just go back to the 'all tables in sequence' page and practice them again thoroughly before trying again.
-                    <br><br>
-                    Once you have got the hang of a number of tables you can select the speed test and choose the tables you want to practice getting quicker at. If you make a mistake, you came see what the right answer is at the end of the test. This will help you learn all of your tables. The speed test is good practice for getting your tables diploma. On the tables diploma the questions are a bit quicker than on the speed test, but if you get all of them right you will get your tables diploma. There are two tables diplomas. 
-                </p>
-            </section> 
-
-            <section class="container">
-                <h2>How to learn multiplication using the multiplication table?</h2>
-               <p>
-               Most of us have probably tried our hardest to learn multiplication tables at a very young age. It is no longer that difficult. The matrix of numbers makes it easy for you to learn all the tables and do multiplication like never before. 
-               <br><br>
-               Try now and never forget your tables forever.
-               <br><br>
-               Step 1: Understand how the Times table grid works. The numbers are arranged in a sequence with up to ten numbers in a row. The size of the grid is expandable and you can pick the chart based on the tables that you need to memorize. 
-               <br><br>
-               Step 2: Order doesn’t matter. You can shuffle the multiplicands in either way, still you will get the same answer. 
-               <br><br>
-               Step 3: Pick the first number from the top row and the second number from the first column.
-               <br><br>
-               Step 4: Now it is time to find the answer! Move down from the first number eventually while moving right from the second number.
-               <br><br>
-               Step 5: Voila! The place where the two lines meet, gives us the final answer.
-               <br><br>
-               For example,
-               <br><br>
-               Let’s look at the grid below and do a simple multiplication.
-               <br> <br>
-               5 x 4 = ?
-               
-               (GRID)- Example
-               <br><br>
-               <img width="886" height="584" src="./img/example.webp" alt="Example Multiplication Chart">
-               <br><br>
-               
-               </p><p>So here we are starting from the number 5 on the first column and from the number 4 on the top row. 
-               By moving down from 5 and moving right from 4, you can find the final answer 20. (5x4=20).</p>
-               
-               <br><br>
-               <p></p>
-               </section>
+                        <p id="startTypingIndicator">Start typing</p>
+                    
+                        <textarea tabindex="-1" id="inputZone" name="" id="" cols="30" rows="10"></textarea>
+                
+                        <div id="capsLockAlert">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z" stroke="#FFD000" stroke-width="2"/>
+                                <path d="M11 15.5V16M11 6V12V6Z" stroke="#FFD000" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <p>CapsLock is on</p>                                           
+                        </div>
+                    </div>
+                </section>            
+        
+                <section class="container adblock">
+                    <h2 class="visually-hidden">Ou partners</h2>
+                    <div class="banner-v">
+                        <img loading="lazy" src="./img/banner-v.webp" width="300" height="600" alt="ad">
+                    </div>
+                </section>
+            </div>
         </div>
-        <aside>
-            <section class="container">
-                <h2 class="visually-hidden">Out partners</h2>
-                <div class="banner-v">
-                    <img loading = "lazy" src="./img/banner-v.webp" width="300" height="600" alt="ad">
-                </div>
-            </section>
 
-            <section class="sidebar__nav container">
-                <h3>Category</h3>
-                <ul class="marked-list">
-                    <li><a class="p" href="#">Multiplication Table 1</a></li>
-                    <li><a class="p" href="#">Multiplication Table 2</a></li>
-                    <li><a class="p" href="#">Multiplication Table 3</a></li>
-                    <li><a class="p" href="#">Multiplication Table 4</a></li>
-                </ul>
-            </section>
+        <div class="chart-container">
+            <div class="wrapper">
+                <h2 class="chart__title">
+                    Global Scores
+                </h2>
 
-            <section class="container">
-                <h2 class="visually-hidden">Out partners</h2>
-                <div class="banner-v">
-                    <img loading = "lazy" src="./img/banner-v.webp" width="300" height="600" alt="ad">
+                <p class="chart__subtitle">
+                    Histogram of results (WPM)
+                </p>
+            </div>
+
+        </div>
+
+        <div class="wrapper">
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h2>How to Improve Your Typing <br> Speed</h2>
+                    <p>Today, almost all over the world, the age of computers and technology prevails. Therefore, in our digital world, touch typing has become a necessity. Many people including employees, businessmen, students, teachers, scientists, are all using computers on a daily basis. Everything has started to revolve around computers, even communication. This is why touch typing becomes imperative for everybody – it allows you to type faster, easier, and without any efforts</p>
                 </div>
-            </section>
-        </aside>
+
+                <div class="faq-card">
+                    <h2>What Is the Best 10-Finger <br>
+                        Typing Layout?</h2>
+                    <p>Of course, you should use ten fingers for typing, but you can start with a layout that’s the most comfortable for you. The small bumps on the F and J keys will help your fingers locate the correct position without looking. This setup should give you a full range of motion. The more you type, the faster you will get. There are a few alternative layouts that propose a more ergonomic approach to typing. You could also take the big leap and try out the Dvorak keyboard, but that’s a different story.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>Who Invented the Qwerty  <br>
+                        Keyboard?</h2>
+                    <p>The QWERTY keyboard was invented in 1868 by Christopher Latham Sholes. He also designed the first successful typewriter. The order of the keys was decided by listing the most common letter combinations and making sure that they were not placed next to each other. He did this to avoid problems that often happened when two neighboring keys were pressed consecutively. The QWERTY keyboard is used to this day and is the most widely used keyboard available.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>Word per Minute (WPM) Typing <br>
+                        Test</h2>
+                    <p>We’ve decided to use the 1,000 most common words in the English language. Additionally, we wanted to include words that you can find in our blog articles. You can think of it as a touch of LiveChat’s flavor to make the typing test a bit more interesting. This free typing speed test focuses on typing itself, so words appear randomly. Reading full sentences may influence your typing speed.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>Is This Really a Free Typing Test <br>
+                        You Can Use?</h2>
+                    <p>As the makers of LiveChat, customer service software for businesses, we wanted to provide the community of our customers and live chat agents with a free typing test. This way, they can consistently practice typing and improve their typing skills. We've also made this tool accessible to every visitor of our page. Our tool is a free typing speed test with a WPM score, but it can be also used as a typing speed test for kids.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>How Can You Upgrade Your <br>
+                        Typing Skills?</h2>
+                    <p>Practice typing as much as you can. Type a lot, type tests, and practice typing tests. Improve your words per minute typing results, and test your typing speed often. Our typing speed test will keep track of all typing tests that you’ve taken in the past so you will be able to see the improvements over time. You will be able to see how your speed typing has changed. If you can do a five-minute typing test every day, your typing skills will increase dramatically.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>How Are the Words From the <br>
+                        Test Chosen?</h2>
+                    <p>We’ve decided to use the 1,000 most common words in the English language. Additionally, we wanted to include words that you can find in our blog articles. You can think of it as a touch of LiveChat’s flavor to make the typing test a bit more interesting. This free typing speed test focuses on typing itself, so words appear randomly. Reading full sentences may influence your typing speed.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>Why Have We Prepared This <br>
+                        Typing Test?</h2>
+                    <p>We prepared this free typing test to give you a quick and easy way to test your typing speed. You can use it when practicing your typing skills to get an idea of how well you are progressing. Businesses can use this test to get an idea about the typing skills of potential hires or to help existing employees develop their typing speed. This typing speed test is one of our free tools, just like the UTM Builder or our Privacy Policy Generator.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>Why Is Typing Speed Important <br>
+                        to Everyone?</h2>
+                    <p>The faster you type, the faster you will be able to communicate with others. You will be able to save a ton of time on any kind of work that requires typing. At first, it will be a couple of extra minutes that you won’t really notice. Over time, the minutes will turn into hours of saved time that you can spend on other activities.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>What Is the Average Typing <br>
+                        Speed?</h2>
+                    <p>The average person types between 38 and 40 words per minute (WPM). That translates into between 190 and 200 characters per minute (CPM). However, professional typists type a lot faster, averaging between 65 and 75 WPM.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>What Is CPM and How Can You <br>
+                        Calculate It?</h2>
+                    <p>The CPM stands for the number of characters you type per minute, including all the mistakes. “Corrected” scores count only correctly typed words. WPM is just the corrected CPM divided by five. This is the de facto international standard.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>How Many Words per Minute Is a <br>
+                        Good Score?</h2>
+                    <p>An average professional typist usually types around 65 to 75 WPM. More advanced positions require 80 to 95 (this is typically the minimum required for dispatch positions and other time-sensitive typing jobs). There are also some advanced typists whose work requires speeds above 120 WPM.</p>
+                </div>
+            </div>
+        </div>
     </main>
-    
+
+    <div id="endPopup">
+        <h1 class="endPopup__title"></h1>
+        <p class="endPoput__text"></p>
+        <button id="newGame">Try again</button>
+    </div>
+
     <footer>
   <div class="wrapper">
-    <div class="footer__intro">
-      <a href="/" class="footer__logo"><img width="300" height="29" src="./img/footer__logo.svg" alt="go to main"></a>
-      <p class="footer-text">
-        This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-        lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet
-        nibh vulputate cursus a sit amet mauris. non neque elit. Sed ut imperdiet nisi. This is Photoshop's version of
-        Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-        elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
-        mauris. non neque elit. Sed ut imperdiet nisi.
-      </p>
-    </div>
-
-    <div class="footer__navigation">
-      <h2>Times Table</h2>
-      <nav class="navigation__container">
-        <ul class="marked-list">
-          <li><a class="footer-text" href="#">1 Times Table</a></li>
-          <li><a class="footer-text" href="#">2 Times Table</a></li>
-          <li><a class="footer-text" href="#">3 Times Table</a></li>
-          <li><a class="footer-text" href="#">4 Times Table</a></li>
-          <li><a class="footer-text" href="#">5 Times Table</a></li>
-          <li><a class="footer-text" href="#">6 Times Table</a></li>
-        </ul>
-        <ul class="marked-list">
-          <li><a class="footer-text" href="#">7 Times Table</a></li>
-          <li><a class="footer-text" href="#">8 Times Table</a></li>
-          <li><a class="footer-text" href="#">9 Times Table</a></li>
-          <li><a class="footer-text" href="#">10 Times Table</a></li>
-          <li><a class="footer-text" href="#">11 Times Table</a></li>
-          <li><a class="footer-text" href="#">12 Times Table</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-
-  <div class="footer__bottom">
-    <div class="wrapper">
-      <p class="footer-text">Copyright © 2022 - All rights reserved</p>
-      <ul class="footer__bottom-links">
-        <li><a class="footer-text" href="#">Contact Us</a></li>
-        <li><a class="footer-text" href="#">Privacy</a></li>
-        <li><a class="footer-text" href="#">T.O.S</a></li>
-        <li><a class="footer-text" href="#">Cookie</a></li>
-        <li><a class="footer-text" href="#">Disclaimer</a></li>
-        <li><a class="footer-text" href="#">About Us</a></li>
-        <li><a class="footer-text" href="#">Blog</a></li>
-      </ul>
-    </div>
+    <p class="footer-text">Copyright © 2022 - All rights reserved</p>
+    <ul class="footer__links">
+      <li><a class="footer-text" href="#">Contact Us</a></li>
+      <li><a class="footer-text" href="#">Privacy</a></li>
+      <li><a class="footer-text" href="#">T.O.S</a></li>
+      <li><a class="footer-text" href="#">Cookie</a></li>
+      <li><a class="footer-text" href="#">Disclaimer</a></li>
+      <li><a class="footer-text" href="#">About Us</a></li>
+      <li><a class="footer-text" href="#">Blog</a></li>
+    </ul>
   </div>
 </footer>
     <script src="./script.js" defer></script>
-<script src="./gameresize.js" defer></script>
-
+    <script src="./speed-typing-script.js"></script>
+    
 
 </body>
 
