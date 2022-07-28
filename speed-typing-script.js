@@ -34,7 +34,7 @@ coursor.classList.add("deactivate");
 let typed;
 let needToType;
 
-let secondsRemain = 60;
+let secondsRemain = 10;
 let wrongChars;
 let correctChars;
 let wordsCount;

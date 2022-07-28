@@ -276,8 +276,8 @@ main{
 
 .endgame-popup{
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,6 +287,9 @@ main{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    padding: 15px;
+    padding-top: 100px;
+    overflow: auto;
 }
 
 .endgame-popup.active{
@@ -323,9 +326,6 @@ main{
     padding: 80px 40px 30px 40px;
     background-color: #f6f6f7;
 
-    img{
-        display: block;
-    }
 
     &>img{
         max-width: 367px;
@@ -785,8 +785,46 @@ footer .wrapper {
         width: 100%;
     }
 
+    .endgame-popup__wrapper{
+        max-width: 700px;
+    }
+
     .footer__links li:nth-child(2n) a {
         text-align: right;
+    }
+
+    .endgame-popup__image{
+        display: none;
+    }
+
+    .endgame-popup__title{
+        text-align: center;
+    }
+
+    .endgame-popup__share,
+    .endgame-popup__text{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .endgame-popup__share{
+        margin: 0 auto;
+    }
+
+    .share__title{
+        text-align: center;
+    }
+
+    .main-container__content{
+        padding: 0;
+    }
+
+    .endgame-popup__main-container{
+        padding: 90px 30px 30px 30px;
+    }
+
+    .endgame-popup__footer{
+        padding: 20px;
     }
 }
 
@@ -883,5 +921,51 @@ footer .wrapper {
 
     footer p {
         text-align: center;
+    }
+
+    .endgame-popup__title{
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .endgame-popup__text{
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        line-height: 38px;
+
+        .red-label{
+            font-size: 20px;
+        }
+    }
+
+    .button {
+        padding: 10px 22px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .endgame-popup__share{
+        img{
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    .endgame-popup__main-container {
+        padding: 50px 30px 20px 30px;
+    }
+    
+    #endgame-popup__close{
+        top: 10px;
+        right: 10px;
+
+        img{
+            width: 40px;
+            height: auto;
+        }
+    }
+
+    .endgame-popup__text{
+        margin-bottom: 20px;
     }
 }
