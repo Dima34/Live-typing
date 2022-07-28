@@ -318,7 +318,8 @@ main {
   opacity: 0;
 }
 
-#typedText, #needToTypeText {
+#typedText,
+#needToTypeText {
   white-space: nowrap;
   position: absolute;
   top: 50%;
@@ -533,13 +534,15 @@ main {
 
 #capsLockAlert {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  color: #ffd000;
+  right: 15px;
+  top: 10px;
   display: flex;
   align-items: center;
   gap: 5px;
   display: none;
+}
+#capsLockAlert p {
+  color: #ffd000;
 }
 
 #capsLockAlert.active {
@@ -963,7 +966,8 @@ h3 {
     white-space: nowrap;
   }
 
-  #typedText, #needToTypeText {
+  #typedText,
+#needToTypeText {
     font-size: 20px;
   }
 

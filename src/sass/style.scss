@@ -29,12 +29,12 @@
     border-radius: 8px;
     margin-bottom: 30px;
 
-    
-    & > p > img,
-    &>img{
+
+    &>p>img,
+    &>img {
         width: 100%;
         height: auto;
-        
+
     }
 }
 
@@ -88,16 +88,16 @@ header .wrapper {
     margin: 0 auto;
 }
 
-main{
+main {
     margin-top: 50px;
 }
 
-.chart-container{
+.chart-container {
     padding-top: 80px;
     background: var(--red);
 }
 
-.chart__title{
+.chart__title {
     font-size: 60px;
     line-height: 60px;
     color: var(--white);
@@ -105,7 +105,7 @@ main{
     margin-bottom: 15px;
 }
 
-.chart__subtitle{
+.chart__subtitle {
     text-align: center;
     color: var(--white);
     font-size: 26px;
@@ -120,7 +120,7 @@ main{
 
 
 
-.faq-grid{
+.faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 42px;
@@ -129,47 +129,47 @@ main{
     padding-bottom: 90px;
 }
 
-.faq-card{
-    h2{
+.faq-card {
+    h2 {
         margin-bottom: 30px;
     }
 }
 
-.game__title{
+.game__title {
     text-align: center;
     margin-top: 28px;
     margin-bottom: 15px;
 }
 
-.game__subtitle{
+.game__subtitle {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 60px;
 }
 
-.game__counters{
+.game__counters {
     display: grid;
 }
 
-.game__counters{
+.game__counters {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.counters__group{
+.counters__group {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 40px;
     margin: 0 auto;
 }
 
-.counters__counter{
+.counters__counter {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    p:first-of-type{
+
+    p:first-of-type {
         width: 100px;
         height: 100px;
         border: 1px solid var(--lightgray);
@@ -183,24 +183,24 @@ main{
     }
 }
 
-.counters__seconds-counter{
+.counters__seconds-counter {
     position: relative;
     width: fit-content;
     justify-self: center;
     margin-right: 38px;
 
-    p:first-of-type{
+    p:first-of-type {
         border: 0;
     }
 
-    svg{
+    svg {
         position: absolute;
         left: -5px;
         top: -5px;
     }
 }
 
-.game__text-container{
+.game__text-container {
     position: relative;
     max-width: 820px;
     height: 100px;
@@ -208,7 +208,7 @@ main{
     margin-top: 90px;
 }
 
-.game__text-holder{
+.game__text-holder {
     width: 100%;
     height: 100%;
     font-weight: 400;
@@ -221,7 +221,7 @@ main{
     border-radius: 15px;
 }
 
-#inputZone{
+#inputZone {
     position: absolute;
     left: 0;
     top: 0;
@@ -230,7 +230,8 @@ main{
     opacity: 0;
 }
 
-#typedText, #needToTypeText{
+#typedText,
+#needToTypeText {
     white-space: nowrap;
     position: absolute;
     top: 50%;
@@ -238,25 +239,25 @@ main{
     font-size: 30px;
 }
 
-#typedText{
+#typedText {
     text-align: right;
     right: calc(59%);
 }
 
-#needToTypeText{
+#needToTypeText {
     text-align: left;
     left: calc(40.5% + 5px);
 }
 
-.printed{
+.printed {
     color: var(--lightgray-1);
 }
 
-.isPrinting{
-    color: var(--blue );
+.isPrinting {
+    color: var(--blue);
 }
 
-#typeCoursor{
+#typeCoursor {
     position: absolute;
     left: 41%;
     top: 50%;
@@ -266,15 +267,15 @@ main{
     background-color: black;
 }
 
-#typeCoursor.blink{
+#typeCoursor.blink {
     animation: blink-animation 1.3s steps(2, start) infinite;
 }
 
-#typeCoursor.deactivate{
+#typeCoursor.deactivate {
     display: none;
 }
 
-.endgame-popup{
+.endgame-popup {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -292,17 +293,17 @@ main{
     overflow: auto;
 }
 
-.endgame-popup.active{
+.endgame-popup.active {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
 
-    .endgame-popup__background{
+    .endgame-popup__background {
         display: block;
     }
 }
 
-.endgame-popup__background{
+.endgame-popup__background {
     position: absolute;
     left: 0;
     top: 0;
@@ -312,7 +313,7 @@ main{
     display: none;
 }
 
-.endgame-popup__wrapper{
+.endgame-popup__wrapper {
     z-index: 2;
     max-width: 890px;
     position: relative;
@@ -320,31 +321,31 @@ main{
     overflow: hidden;
 }
 
-.endgame-popup__main-container{
+.endgame-popup__main-container {
     display: flex;
     background: var(--white);
     padding: 80px 40px 30px 40px;
     background-color: #f6f6f7;
 
 
-    &>img{
+    &>img {
         max-width: 367px;
         height: auto;
     }
 }
 
-.main-container__content{
+.main-container__content {
     padding-left: 20px;
 }
 
-.endgame-popup__title{
+.endgame-popup__title {
     margin-bottom: 15px;
     font-size: 50px;
     line-height: 0.7;
     letter-spacing: 0.01px;
 }
 
-.endgame-popup__text{
+.endgame-popup__text {
     padding-left: 10px;
     font-size: 24px;
     letter-spacing: 0.5px;
@@ -353,7 +354,7 @@ main{
     margin-bottom: 10px;
 }
 
-.red-label{
+.red-label {
     font-weight: 700;
     background: var(--red);
     color: var(--white);
@@ -363,7 +364,7 @@ main{
     border-radius: 5px;
 }
 
-.endgame-popup__share{
+.endgame-popup__share {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
@@ -371,42 +372,42 @@ main{
     width: fit-content;
     padding-left: 10px;
 
-    a{
-        &:hover{
+    a {
+        &:hover {
             opacity: .7;
         }
-    
-        &:focus{
+
+        &:focus {
             opacity: .3;
         }
     }
 }
 
-.share__title{
+.share__title {
     grid-column: 1/4;
     font-size: 20px;
 }
 
-#endgame-popup__close{
+#endgame-popup__close {
     position: absolute;
     top: 20px;
     right: 20px;
 
-    &:hover{
+    &:hover {
         opacity: .8;
     }
 
-    &:focus{
+    &:focus {
         opacity: .5;
     }
 }
 
-.endgame-popup__footer{
+.endgame-popup__footer {
     padding: 45px;
     background: var(--white);
 }
 
-.button{
+.button {
     background: var(--red);
     border: 10px;
     padding: 10px 38px;
@@ -417,16 +418,16 @@ main{
     margin: 0 auto;
     border-radius: 10px;
 
-    &:hover{
+    &:hover {
         opacity: .8;
     }
 
-    &:focus{
+    &:focus {
         opacity: .5;
     }
 }
 
-#startTypingIndicator{
+#startTypingIndicator {
     position: absolute;
     left: 41%;
     top: -15px;
@@ -450,22 +451,26 @@ main{
     transform: translateX(-50%);
 }
 
-#startTypingIndicator.active{
+#startTypingIndicator.active {
     display: block;
 }
 
-#capsLockAlert{
+#capsLockAlert {
     position: absolute;
-    right: 5px;
-    top: 5px;
-    color: #ffd000;
+    right: 15px;
+    top: 10px;
     display: flex;
     align-items: center;
     gap: 5px;
     display: none;
+
+    p {
+        color: #ffd000;
+
+    }
 }
 
-#capsLockAlert.active{
+#capsLockAlert.active {
     display: flex;
 }
 
@@ -473,9 +478,11 @@ main{
     0% {
         transform: translateY(0) translateX(-50%);
     }
+
     50% {
         transform: translateY(-1rem) translateX(-50%);
     }
+
     100% {
         transform: translateY(0) translateX(-50%);
     }
@@ -483,7 +490,7 @@ main{
 
 @keyframes blink-animation {
     to {
-      visibility: hidden;
+        visibility: hidden;
     }
 }
 
@@ -681,12 +688,12 @@ footer .wrapper {
         transition: .25s linear;
         padding: 30px;
 
-        a{
+        a {
             color: var(--white);
         }
     }
 
-    .adblock{
+    .adblock {
         display: none;
     }
 
@@ -714,7 +721,7 @@ footer .wrapper {
         font-size: 20px;
     }
 
-    .faq-grid{
+    .faq-grid {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -785,7 +792,7 @@ footer .wrapper {
         width: 100%;
     }
 
-    .endgame-popup__wrapper{
+    .endgame-popup__wrapper {
         max-width: 700px;
     }
 
@@ -793,37 +800,37 @@ footer .wrapper {
         text-align: right;
     }
 
-    .endgame-popup__image{
+    .endgame-popup__image {
         display: none;
     }
 
-    .endgame-popup__title{
+    .endgame-popup__title {
         text-align: center;
     }
 
     .endgame-popup__share,
-    .endgame-popup__text{
+    .endgame-popup__text {
         padding-left: 0;
         text-align: center;
     }
 
-    .endgame-popup__share{
+    .endgame-popup__share {
         margin: 0 auto;
     }
 
-    .share__title{
+    .share__title {
         text-align: center;
     }
 
-    .main-container__content{
+    .main-container__content {
         padding: 0;
     }
 
-    .endgame-popup__main-container{
+    .endgame-popup__main-container {
         padding: 90px 30px 30px 30px;
     }
 
-    .endgame-popup__footer{
+    .endgame-popup__footer {
         padding: 20px;
     }
 }
@@ -850,7 +857,7 @@ footer .wrapper {
 
     .header__logo img {
         width: 200px;
-        height: 32px;    
+        height: 32px;
     }
 
     .container {
@@ -868,41 +875,42 @@ footer .wrapper {
         letter-spacing: 1px;
     }
 
-    .faq-grid{
+    .faq-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin: 0 auto;
     }
 
-    .game__counters{
+    .game__counters {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
     }
 
-    .counters__group{
+    .counters__group {
         column-gap: 15px;
     }
 
-    .counters__seconds-counter{
+    .counters__seconds-counter {
         margin-right: 0;
         margin-top: 28px;
     }
 
-    .counters__counter:not(.counters__seconds-counter){
+    .counters__counter:not(.counters__seconds-counter) {
 
-        p:first-of-type{
+        p:first-of-type {
             width: 70px;
             height: 70px;
             font-size: 32px;
         }
 
-        p{
+        p {
             white-space: nowrap;
         }
     }
 
-    #typedText, #needToTypeText{
+    #typedText,
+    #needToTypeText {
         font-size: 20px;
     }
 
@@ -910,7 +918,7 @@ footer .wrapper {
         height: 25px;
     }
 
-    .game__text-container{
+    .game__text-container {
         height: 80px;
         margin-top: 50px;
     }
@@ -923,17 +931,17 @@ footer .wrapper {
         text-align: center;
     }
 
-    .endgame-popup__title{
+    .endgame-popup__title {
         font-size: 32px;
         line-height: 1.1;
     }
 
-    .endgame-popup__text{
+    .endgame-popup__text {
         font-size: 20px;
         letter-spacing: 0.5px;
         line-height: 38px;
 
-        .red-label{
+        .red-label {
             font-size: 20px;
         }
     }
@@ -944,8 +952,8 @@ footer .wrapper {
         line-height: 25px;
     }
 
-    .endgame-popup__share{
-        img{
+    .endgame-popup__share {
+        img {
             width: 50px;
             height: auto;
         }
@@ -954,18 +962,18 @@ footer .wrapper {
     .endgame-popup__main-container {
         padding: 50px 30px 20px 30px;
     }
-    
-    #endgame-popup__close{
+
+    #endgame-popup__close {
         top: 10px;
         right: 10px;
 
-        img{
+        img {
             width: 40px;
             height: auto;
         }
     }
 
-    .endgame-popup__text{
+    .endgame-popup__text {
         margin-bottom: 20px;
     }
 }
