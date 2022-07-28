@@ -70,6 +70,7 @@
     </div>
 
     <main>
+        
         <div class="wrapper">
             <div class="splitted-content">
                 <section class="container game">
@@ -144,7 +145,6 @@
                     Histogram of results (WPM)
                 </p>
             </div>
-
         </div>
 
         <div class="wrapper">
@@ -223,10 +223,48 @@
         </div>
     </main>
 
-    <div id="endPopup">
-        <h1 class="endPopup__title"></h1>
-        <p class="endPoput__text"></p>
-        <button id="newGame">Try again</button>
+    <div id="endPopup" class="endgame-popup">
+        <div class="endgame-popup__background"></div>
+        <div class="endgame-popup__wrapper">
+            <div class="endgame-popup__main-container">
+                <img src="./img/сheetah.png" alt="endgame image" class="endgame-popup__image">
+                <div class="main-container__content">
+                    <h2 class="endgame-popup__title">You’re an Cheetah</h2>
+                    <p class="endgame-popup__text">
+                        Neat! You type with the speed of
+                        <span class="red-label">42 WPM</span>  (174 CPM). Your accuracy
+                        was <strong>100%</strong>. Good job!
+                    </p>
+                    
+                    <div class="endgame-popup__share">
+                        <p class="share__title">
+                            <strong>
+                                Share your score
+                            </strong>
+                        </p>
+                        <a href="#">
+                            <img src="./img/facebook-ico.png" alt="share on facebook">
+                        </a>
+                        <a href="#">
+                            <img src="./img/linkedin-ico.png" alt="share on linkedin">
+                        </a>
+                        <a href="#">
+                            <img src="./img/twitter-ico.png" alt="share on twitter">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="endgame-popup__footer">
+                <button id="newGame" class="button">Try Again</button>
+            </div>
+    
+            <button id="endgame-popup__close">
+                <img src="./img/close.png" alt="close">
+            </button>
+        </div>
+        
+        
     </div>
 
     <footer>

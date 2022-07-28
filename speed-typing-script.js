@@ -24,6 +24,7 @@ const charsMinCounter = document.getElementById("charsMinCounter");
 const accuracyCounter = document.getElementById("accuracyCounter");
 const endPopup = document.getElementById("endPopup");
 const restartButton = document.getElementById("newGame");
+const closeButton = document.getElementById("endgame-popup__close");
 const typingIndicator = document.getElementById("startTypingIndicator");
 const capsLockIndicator = document.getElementById("capsLockAlert");
 const circleTimeCounter = document.getElementById("circleTimeCounter");
@@ -33,7 +34,7 @@ coursor.classList.add("deactivate");
 let typed;
 let needToType;
 
-let secondsRemain = 10;
+let secondsRemain = 60;
 let wrongChars;
 let correctChars;
 let wordsCount;
@@ -116,11 +117,7 @@ function StartTypingSequence() {
 
         let inputCharCode = e.data.charCodeAt(0);
 
-        console.log(`char code = ` + inputCharCode);
-        console.log(`next code = ` + GetNextCharCode());
-
         if(inputCharCode === GetNextCharCode()){
-            console.log("correct");
             CorrectWordSequence();
         } else{
             wrongChars ++;
@@ -248,33 +245,51 @@ function HandleEndPopupControlls(){
         ClosePopup();
         Init();
     })
+
+    closeButton.addEventListener("click", ()=>{
+        ClosePopup();
+        Init();
+    })
 }
 
 function FillEndPopup(){
-    let title, text;
+    let title, text, imagePath;
 
-    let popupTitleEl = endPopup.querySelector(".endPopup__title");
-    let popupTextEl = endPopup.querySelector(".endPoput__text");
+    let popupTitleEl = endPopup.querySelector(".endgame-popup__title");
+    let popupTextEl = endPopup.querySelector(".endgame-popup__text");
+    let popupImgEl = endPopup.querySelector(".endgame-popup__image");
 
-    if(wpm <= 10)
+    if(wpm < 25)
     {
-        title = `You-re a Turtle`;
-        text = `You are a turtle with ${wpm}WPM (${cpm}CPM). Your accuracy was ${accuracy}%. Keep practicing`;
-    } else if(wpm <= 20)
+        title = "You’re an Turtle",
+        imagePath  = "./img/Turtle.png"
+    } else if(wpm < 35)
     {
-        title = `You-re a T-rex`;
-        text = `Nice! You are a T-rex with ${wpm}WPM (${cpm}CPM). Your accuracy was ${accuracy}%. Keep practicing`;
-    }else if(wpm <= 30)
+        title = "You’re an Hippo",
+        imagePath  = "./img/Hippo.png"
+    } else if(wpm < 45)
     {
-        title = `You-re a Robot!`;
-        text = `Well done! You are a Robot with ${wpm}WPM (${cpm}CPM). Your accuracy was ${accuracy}%. Keep practicing`;
-    } else{
-        title = `You're done!`;
-        text = `Keep practicing`;
+        title = "You’re an Octopus",
+        imagePath  = "./img/Octopus.png"
+    } else if(wpm < 55)
+    {
+        title = "You’re an Rabbit",
+        imagePath  = "./img/Rabbit.png"
+    } else if(wpm < 65)
+    {
+        title = "You’re an lion",
+        imagePath  = "./img/Tiger.png"
+    } else
+    {
+        title = "You’re an Cheetah",
+        imagePath  = "./img/turtle.png"
     }
 
-    popupTitleEl.innerText = title;
-    popupTextEl.innerText = text;
+    text = `Neat! You type with the speed of <span class="red-label">${wpm} WPM</span>  (${cpm} CPM). Your accuracy was <strong>${accuracy}</strong>. Good job!`,
+
+    popupImgEl.setAttribute("src", imagePath);
+    popupTitleEl.innerHTML = title;
+    popupTextEl.innerHTML = text;
 }
 
 function OpenPopup() {
@@ -282,7 +297,7 @@ function OpenPopup() {
 }
 
 function ClosePopup() {
-    endPopup.className = "";
+    endPopup.classList.remove("active");
 }
 
 function ShowTypingIndicator(){
