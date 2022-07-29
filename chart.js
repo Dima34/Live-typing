@@ -99,7 +99,8 @@ const config = {
                 max: 90,
                 ticks: {
                     stepSize: 5,
-                    beginAtZero:true
+                    beginAtZero:true,
+                    color: 'white',
                 },
                 grid: {
                     display: false,
@@ -115,7 +116,7 @@ const config = {
                 },
                 ticks: {
                     display : false,
-                    beginAtZero:true
+                    beginAtZero:true,
                 }
             }
         }
