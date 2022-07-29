@@ -1035,5 +1035,9 @@ h3 {
   .endgame-popup__text {
     margin-bottom: 20px;
   }
+
+  .chart__wrapper {
+    margin-top: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
