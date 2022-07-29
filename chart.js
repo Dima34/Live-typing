@@ -78,7 +78,7 @@ const data = {
         label: 'dataset',
         backgroundColor: 'rgb(255, 255, 255)',
         borderColor: 'rgb(255, 255, 255)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: [0, 10, 5, 2, 20, 30, 610000],
     }]
 };
 
@@ -86,6 +86,8 @@ const config = {
     type: 'bar',
     data: data,
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false
@@ -96,7 +98,8 @@ const config = {
                 min:0,
                 max: 90,
                 ticks: {
-                    stepSize: 5
+                    stepSize: 5,
+                    beginAtZero:true
                 },
                 grid: {
                     display: false,
@@ -105,12 +108,14 @@ const config = {
                 
             },
             y: {
+                max: 610000,
                 grid: {
                     display: false,
                     borderColor: '#fe5a3f'
                 },
                 ticks: {
                     display : false,
+                    beginAtZero:true
                 }
             }
         }
