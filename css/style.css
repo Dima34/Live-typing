@@ -421,7 +421,7 @@ main {
   background-color: #f6f6f7;
 }
 .endgame-popup__main-container > img {
-  max-width: 367px;
+  width: 100%;
   height: auto;
 }
 
