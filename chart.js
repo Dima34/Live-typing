@@ -93,20 +93,27 @@ const config = {
                 display: false
             }
         },
+        layout: {
+            padding: 40
+        },
         scales: {
             x: {
-                min:0,
-                max: 90,
+                
                 ticks: {
-                    stepSize: 5,
-                    beginAtZero:true,
                     color: 'white',
+                    autoSkip: true,
+                    callback: function(val, index) {
+                        // Hide the label of every 2nd dataset
+                        return index % 10 === 0 ? this.getLabelForValue(val) : '';
+                    },
                 },
                 grid: {
                     display: false,
                     borderColor: '#fe5a3f'
                 },
-                
+                title: {
+                    padding: 40
+                }
             },
             y: {
                 max: 610000,
@@ -116,9 +123,9 @@ const config = {
                 },
                 ticks: {
                     display : false,
-                    beginAtZero:true,
                 }
-            }
+            },
+        
         }
     }
 };
