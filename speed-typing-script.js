@@ -114,6 +114,7 @@ function CheckForStart() {
 function StartTypingSequence() {
     inputZone.addEventListener("input", (e)=>{
         CheckForStart();
+        e.target.value = "";
 
         let inputCharCode = e.data.charCodeAt(0);
 
