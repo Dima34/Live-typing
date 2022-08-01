@@ -86,10 +86,10 @@ function SetRendomTextPlace() {
     let randomPlaceIndex = Math.round(Math.random() * splittedTextLine.length);
 
     if(randomPlaceIndex < 120){
-        needToType = splittedTextLine.slice(randomPlaceIndex).join(String.fromCharCode(160)) + " " + splittedTextLine.join(String.fromCharCode(160));
+        needToType = splittedTextLine.slice(randomPlaceIndex).join(" ") + " " + splittedTextLine.join(" ");
         console.log("low amount");
     }else{
-        needToType = splittedTextLine.slice(randomPlaceIndex).join(String.fromCharCode(160));
+        needToType = splittedTextLine.slice(randomPlaceIndex).join(" ");
     }
 }
 
