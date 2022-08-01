@@ -287,32 +287,32 @@ function FillEndPopup(){
     {
         uptitle = "Nice work!"
         title = "Turtle",
-        imagePath  = "./img/Turtle.png"
+        imagePath  = "./img/Turtle.webp"
     } else if(wpm < 35)
     {
         uptitle = "Good Job!"
         title = "Hippo",
-        imagePath  = "./img/Hippo.png"
+        imagePath  = "./img/Hippo.webp"
     } else if(wpm < 45)
     {
         uptitle = "Well done!"
         title = "Octopus",
-        imagePath  = "./img/Octopus.png"
+        imagePath  = "./img/Octopus.webp"
     } else if(wpm < 55)
     {
         uptitle = "Excellent!"
         title = "Rabbit",
-        imagePath  = "./img/Rabbit.png"
+        imagePath  = "./img/Rabbit.webp"
     } else if(wpm < 65)
     {
         uptitle = "Imressive!"
         title = "Lion",
-        imagePath  = "./img/Tiger.png"
+        imagePath  = "./img/Tiger.webp"
     } else
     {
         uptitle = "Incredible!"
         title = "Cheetah",
-        imagePath  = "./img/turtle.png"
+        imagePath  = "./img/turtle.webp"
     }
 
 
