@@ -1,18 +1,4 @@
-const textList = [
-    `The color of animals is by no means a matter of chance; it depends on many considerations, but in the majority of cases tends to protect the animal from danger by rendering it less conspicuous. Perhaps it may be said that if coloring is mainly protective, there ought to be but few brightly colored animals. There are, however, not a few cases in which vivid colors are themselves protective. The kingfisher itself, though so brightly colored, is by no means easy to see. The blue harmonizes with the water, and the bird as it darts along the stream looks almost like a flash of sunlight. Desert animals are generally the color of the desert. Thus, for instance, the lion, the antelope, and the wild donkey are all sand-colored. “Indeed,” says Canon Tristram, “in the desert, where neither trees, brushwood, nor even undulation of the surface afford the slightest protection to its foes, a modification of color assimilated to that of the surrounding country is absolutely necessary. Hence, without exception, the upper plumage of every bird, and also the fur of all the smaller mammals and the skin of all the snakes and lizards, is of one uniform sand color.” The next point is the color of the mature caterpillars, some of which are brown. This probably makes the caterpillar even more conspicuous among the green leaves than would otherwise be the case. Let us see, then, whether the habits of the insect will throw any light upon the riddle. What would you do if you were a big caterpillar? Why, like most other defenseless creatures, you would feed by night, and lie concealed by day. So do these caterpillars. When the morning light comes, they creep down the stem of the food plant, and lie concealed among the thick herbage and dry sticks and leaves, near the ground, and it is obvious that under such circumstances the brown color really becomes a protection. It might indeed be argued that the caterpillars, having become brown, concealed themselves on the ground, and that we were reversing the state of things. But this is not so, because, while we may say as a general rule that large caterpillars feed by night and lie concealed by day, it is by no means always the case that they are brown; some of them still retaining the green color. We may then conclude that the habit of concealing themselves by day came first, and that the brown color is a later adaptation.`,
-    `The self-study lessons in this section are written and organised according to the levels of the Common European Framework of Reference for languages (CEFR). There are different types of texts and interactive exercises that practise the reading skills you need to do well in your studies, to get ahead at work and to communicate in English in your free time.`,
-    `Reading practice to help you understand texts with a wide vocabulary where you may need to consider the writer's opinion. Texts include articles, reports, messages, short stories and reviews.`,
-    "It was long, long ago when the Fox and the Crane were close friends. One fine day the Fox invited the Crane to dinner with her and said to him: «Come, buddy! Come, my dear! I’ll treat you heartily!” And so the Crane came to the Fox for the dinner party. The Fox had cooked semolina for the dinner and smeared it over the plate. Then she served it and treated her guest.",
-    `When we talk about motivating others, the justification is the end result (either we want to avoid the pain or go towards pleasure) or what we want to get the person to do. How we achieve the end result, are our alternatives. As a manager, we need to understand the other person's justification and then come up with alternatives. We may then choose the right alternative. However, in general, we choose the first or the emotionally satisfying one. Typically people stop at this level of analysis and start to act. But a good manager would think of the following also: Will the action guarantee the consequence? What about other unintended consequences? This requires a certain experience. Are we capable of doing this action? Intention and the selection of the most ideal alternative do not guarantee execution, if we do not have the skills and the experience. Most motivational tactics fail, because without execution capability, they is only wishful thinking.`,
-    `Income before securities transactions was up 10.8 percent from $13.49 million in 1982 to $14.95 million in 1983. Earnings per share (adjusted for a 10.5 percent stock dividend distributed on August 26) advanced 10 percent to $2.39 in 1983 from $2.17 in 1982. Earnings may rise for 7 years. Hopefully, earnings per share will grow another 10 percent. Kosy, Klemin, and Bille began selling on May 23, 1964. Their second store was founded in Renton on August 3, 1965. From 1964 to 1984, they opened more than 50 stores through-out the country. As they expanded, 12 regional offices had to be organized. Each of these 12 regional offices had to be organized. Each of these 12 regions employs from 108 to 578 people. National headquarters employs 1,077 people. Carole owns 118 stores located in 75 cities ranging as far west as Seattle and as far east as Boston. She owns 46 stores south of the Mason-Dixon line and 24 stores north of Denver. Carole buys goods from 89 companies located in 123 countries and all 50 states. Carole started in business on March 3, 1975. She had less than $6,000 in capital assets.`,
-    `Because of the laboriousness of the translation process, since the 1940s efforts have been made, with varying degrees of success, to automate translation or to mechanically aid the human translator. More recently, the rise of the Internet has fostered a world-wide market for translation services and has facilitated "language localization". Ideally, the translator must know both languages, as well as the subject that is to be translated.`,
-    `A freelancer or freelance worker, is a term commonly used for a person who is self-employed and is not necessarily committed to a particular employer long-term. Freelance workers are sometimes represented by a company or a temporary agency that resells freelance labor to clients; others work independently or use professional associations or websites to get work. While the term "independent contractor" would be used in a higher register of English to designate the tax and employment classes of this type of worker, the term freelancing is most common in culture and creative industries and this term specifically motions to participation therein. Fields, professions, and industries where freelancing is predominant include: music, writing, acting, computer programming, web design, graphic design, translating and illustrating, film and video production and other forms of piece work which some cultural theorists consider as central to the cognitive-cultural economy.`,
-    `Two common terms used to describe a salesperson are "Farmer" and "Hunter". The reality is that most professional salespeople have a little of both. A hunter is often associated with aggressive personalities who use aggressive sales technique. In terms of sales methodology, a hunter refers to a person whose focus is on bringing in and closing deals. This process is called "sales capturing". An example is a commodity sale such as a long distance salesperson, shoe salesperson and to a degree a car salesperson. Their job is to find and convert buyers. A sales farmer is someone who creates sales demand through activities that directly influence and alter the buying process.`,
-    `Trying to make a wise, good choice when thinking about what kinds of careers might be best for you is a hard thing to do. Your future may very well depend on the ways you go about finding the best job openings for you in the world of work. Some people will feel that there is one and only one job in the world for them. Hard thinking and a lot of hard work will help them find the one job that is best for them. Jobs are there for those with skills and a good work ethic. Many new young artists in the upper New England states are famous around the world as leaders in new American art. These fine artists are very good in their chosen fields and are willing to share their many talents by teaching others. The students have had the chance to learn and use skills in oil painting, sketching with chalk, sculpting, and weaving. Learning to typewrite is a skill that will help all of us in our work today. The development of the computer will open doors for people with the keyboarding skills and will make typing a necessity. Managers, as well as secretaries, will need skill at the keyboard to input data and process words. Therefore, good keyboarding skills may be important to you.`,
-    "This sort of character is met with pretty frequently in a certain class. They are people who know everyone—that is, they know where a man is employed, what his salary is, whom he knows, whom he married, what money his wife had, who are his cousins, and second cousins, etc., etc. These men generally have about a hundred pounds a year to live on, and they spend their whole time and talents in the amassing of this style of knowledge, which they reduce—or raise—to the standard of a science.",
-    "Towards the end of November, during a thaw, at nine o’clock one morning, a train on the Warsaw and Petersburg railway was approaching the latter city at full speed. The morning was so damp and misty that it was only with great difficulty that the day succeeded in breaking; and it was impossible to distinguish anything more than a few yards away from the carriage windows. Some of the passengers by this particular train were returning from abroad; but the third-class carriages were the best filled, chiefly with insignificant persons of various occupations and degrees, picked up at the different stations nearer town. All of them seemed weary, and most of them had sleepy eyes and a shivering expression, while their complexions generally appeared to have taken on the colour of the fog outside.",
-    "One of them was a young fellow of about twentyseven, not tall, with black curling hair, and small, grey, fiery eyes. His nose was broad and flat, and he had high cheek bones; his thin lips were constantly compressed into an impudent, ironical—it might almost be called a malicious—smile; but his forehead was high and well formed, and atoned for a good deal of the ugliness of the lower part of his face. A special feature of this physiognomy was its death-like pallor, which gave to the whole man an indescribably emaciated appearance in spite of his hard look, and at the same time a sort of passionate and suffering expression which did not harmonize with his impudent, sarcastic smile and keen, self-satisfied bearing. He wore a large fur—or rather astrachan—overcoat, which had kept him warm all night, while his neighbour had been obliged to bear the full severity of a Russian November night entirely unprepared. His wide sleeveless mantle with a large cape to it—the sort of cloak one sees upon travellers during the winter months in Switzerland or North Italy—was by no means adapted to the long cold journey through Russia, from Eydkuhnen to St. Petersburg.", 
-];
+const textLine = `animal until stretching cover strike equal explore grouping why what weekly near good would grass yes eighth for time center bear dance prehistoric monthly man say three idea place keyboarding participate maybe window size many salt milk second park twelfth flood high thirteen cartoon uppercase in flower message whole villain walk land horsetail turn eye number earth year third semi-monthly seven throw program location ground order first kind leg plant skipping subtraction comprehension rarely purple opinion preparation wind must group before seasonal state by coach type alphabet were joint ran like corner distance flexibility keep occasionally wants height elevation turning eighty eighteen weather seasons debt brown May thirty differences check from cat fish last came dissolving cold decreasing body globe had April labor learn town ate vegetation rhyme earth's below jump little nineth sixtiety gas competition machine air work cook boy we reasoning position yard ninetieth numeric movie much garden might answer tomorrow during letter-sound numeral author back stream perspiration hers barrier out price fourteen bank pig composition estimate nineteenth hopping minute when measuring area pass chicken rain any there am five too division sixty put white about date road width circle after ability jogging one unusual sure river week on characteristics argue daily sliding night drawing thirteenth morning sister but they spending motion urban galloping solid worker line arm pound circular just only test_embed_codes event united another sale book nineteen if print crop chapter long materials title neighborhood landing measurement language very rock sight climb speed left make hill run let which six may usually two shoe front magnifier sky yellow prediction them money village diversity breathing think did job typing great down circling smiled decade outdoor greater bread September fly usual to visit his map go jumping snow song me January sun pebble practice search game team half take seller live play purpose street fifteenth liquid or glove quarter people doll blue her kick fortieth August blend everyday funny mental relationship top house every chart congruent some then television & seem country evening green squirrel organize vowel ring advertising inch ending under guess family have consonant theater look thirtieth local lists use reread are finish stadium mammoth heat teamwork experience rainfall gravity highway hunt save picture fuel list than shopping stop yours beginning going boulder my folktale sixteen went nanosecond turns straight-line similarities factory duck hotel speech loss please far lunging those goal us scientist habitat twelve our ask July backward videotape mountain Christmas open construction wildlife rotation better come nine pattern graph ordinal interval textbook table seventh sing solve rabbit thermometer who past model robin could been seventeen seed city afternoon pipeline since creek extension how downtown sun's give this rate fifty goods zero railroad apple outside word a odd balance similarity can four transportation talked inside so prewriting hospital these addition farming thing old cup discussion an sum race housing wood eight rope symbol sports food insect chance mile science June more page and take-off behind sell party present penny away energy increasing character do temperature likely heart behavior seventeenth life new sound said effect twenty over next light digit forest poem calendar services tale other between fourteenth combination change throwing their eighteenth sport cloud above observe she ninety never find overhand box up write here project November zigzag of home conversation custom future question forty ready shape image school feet animals coin estimation population lake less government sheep dictionary newspaper stick airport freezing discover dime community is sixth fiftieth skills way today October magnet 2016 sixteenth difference short dollar name score exploration pulling twentieth skill March hour him where triangle buyer water ship spelling SantaClaus pushing farmer red eightieth volume tree death headstand now activity matter all both lifting still thought set no catch yesterday also angle direction black toy it once mixture be eat burning orange see precipitation yearly vocabulary museum growth parent each shelter needs follow few player right rural was outcome minus gymnasium because hundredth reason birthday region bought climbing ten square often vibration ocean clock foot hundred earn I ball underhand listen organisms magnification cardinal nice tenth thank corn desert should exercise as cost bell timber poverty listening always with climate plus consequence locate cake again that the describe watch eleven business get at ruler he fishing publish girl discuss begin into taking twisting rectangle main round February has weight fourth lowercase world dam big small fifteen will coast seventieth head you states seventy month know star universe value review tallies day want conditions riding sign sentence not predict even dinosaur pretty fairy eleventh nation fifth your settlement explain soil`;
 
 const typedTextZone = document.getElementById("typedText");
 const needToTypeTextZone = document.getElementById("needToTypeText");
@@ -28,6 +14,18 @@ const closeButton = document.getElementById("endgame-popup__close");
 const typingIndicator = document.getElementById("startTypingIndicator");
 const capsLockIndicator = document.getElementById("capsLockAlert");
 const circleTimeCounter = document.getElementById("circleTimeCounter");
+
+const typingSound = new Howl({
+    src:["./sounds/typing.mp3"],
+    volume: 0.5,
+})
+const wrongSound = new Howl({
+    src:["./sounds/wrong.mp3"],
+    volume: 0.5,
+})
+const clockTicking = new Howl({
+    src:["./sounds/clock_ticking.mp3"],
+})
 
 coursor.classList.add("deactivate");
 
@@ -48,10 +46,12 @@ let isStarted = false;
 let secondsFromStart = 0;
 let secondsToEnd = 0;
 
+let isTimeSoundPlay = false;
+let timeSoundId;
 
 function Init() {
     SetDefaultValues();
-    SetRendomText();
+    SetRendomTextPlace();
     VisualizeText();
     VisualizeCounters();
     StartTypingSequence();
@@ -79,18 +79,35 @@ function SetDefaultValues() {
     wordsCount = 0;
 }
 
-function SetRendomText() {
-    let randomTextNumber = Math.round(Math.random() * (textList.length - 1));
-    needToType = textList[randomTextNumber];
+function SetRendomTextPlace() {
+    let splittedTextLine = textLine.split(" ");
+
+    // Get random place in text
+    let randomPlaceIndex = Math.round(Math.random() * splittedTextLine.length);
+
+    if(randomPlaceIndex < 120){
+        needToType = splittedTextLine.slice(randomPlaceIndex).join(String.fromCharCode(160)) + " " + splittedTextLine.join(String.fromCharCode(160));
+        console.log("low amount");
+    }else{
+        needToType = splittedTextLine.slice(randomPlaceIndex).join(String.fromCharCode(160));
+    }
 }
 
 function TickTime() {
     secondsToEnd--;
     secondsFromStart++;
-
+    
+    
+    HandleTimeOverSound();
     VisualizeCounters();
     CheckForEnd();
 }
+
+function HandleTimeOverSound() {
+    if(secondsToEnd <= 10)
+    clockTicking.play();
+}
+
 
 function CheckForEnd() {
     if(secondsToEnd == 0){
@@ -115,6 +132,7 @@ function StartTypingSequence() {
     inputZone.addEventListener("input", (e)=>{
         CheckForStart();
         e.target.value = "";
+        typingSound.play();
 
         let inputCharCode = e.data.charCodeAt(0);
 
@@ -122,6 +140,7 @@ function StartTypingSequence() {
             CorrectWordSequence();
         } else{
             wrongChars ++;
+            wrongSound.play();
         }
 
         VisualizeCounters();
@@ -197,7 +216,6 @@ function GetCorrectNum(num){
 function VisualizeText() {
     let isCurrentNotSpacebar = typed.slice(-1).charCodeAt(0) != 32 ? true : false
 
-
     let splittedTypedList = typed.split(" ");
     let splittedNeedToTypeList = needToType.split(" ");
 
@@ -205,7 +223,6 @@ function VisualizeText() {
     let needToTypeRenderLine = "";
 
     splittedTypedList.forEach((el, index) => {
-
         if(isCurrentNotSpacebar && index == splittedTypedList.length-1){
             typedRenderLine += String.fromCharCode(160) + `<span class = "isPrinting">${el}</span>`
         } else{
@@ -227,7 +244,7 @@ function CoursorCheckingSequence() {
     })
 
     inputZone.addEventListener("focus", ()=>{
-        coursor.className = "blink";
+        MakeTypingCoursorBlink();
     })
 
     inputZone.addEventListener("input", ()=> {
@@ -239,6 +256,9 @@ function CoursorCheckingSequence() {
 
         timeoutId = setTimeout(()=>{coursor.className = "blink";}, 10);
     })
+}
+function MakeTypingCoursorBlink() {
+    coursor.className = "blink";
 }
 
 function HandleEndPopupControlls(){
@@ -254,43 +274,69 @@ function HandleEndPopupControlls(){
 }
 
 function FillEndPopup(){
-    let title, text, imagePath;
+    let title, uptitle, imagePath;
 
-    let popupTitleEl = endPopup.querySelector(".endgame-popup__title");
-    let popupTextEl = endPopup.querySelector(".endgame-popup__text");
+    let popupTitleEl = endPopup.querySelector(".endgame-popup__title span");
+    let uptitleText = endPopup.querySelector(".endgame-popup__uptitle");
     let popupImgEl = endPopup.querySelector(".endgame-popup__image");
+    let speedNum = document.getElementById("endgame-popup__speed-score");
+    let accuracyNum = document.getElementById("endgame-popup__accuracy-score");
+    let timeNum = document.getElementById("endgame-popup__time-score");
 
     if(wpm < 25)
     {
-        title = "You’re an Turtle",
+        uptitle = "Nice work!"
+        title = "Turtle",
         imagePath  = "./img/Turtle.png"
     } else if(wpm < 35)
     {
-        title = "You’re an Hippo",
+        uptitle = "Good Job!"
+        title = "Hippo",
         imagePath  = "./img/Hippo.png"
     } else if(wpm < 45)
     {
-        title = "You’re an Octopus",
+        uptitle = "Well done!"
+        title = "Octopus",
         imagePath  = "./img/Octopus.png"
     } else if(wpm < 55)
     {
-        title = "You’re an Rabbit",
+        uptitle = "Excellent!"
+        title = "Rabbit",
         imagePath  = "./img/Rabbit.png"
     } else if(wpm < 65)
     {
-        title = "You’re an lion",
+        uptitle = "Imressive!"
+        title = "Lion",
         imagePath  = "./img/Tiger.png"
     } else
     {
-        title = "You’re an Cheetah",
+        uptitle = "Incredible!"
+        title = "Cheetah",
         imagePath  = "./img/turtle.png"
     }
 
-    text = `Neat! You type with the speed of <span class="red-label">${wpm} WPM</span>  (${cpm} CPM). Your accuracy was <strong>${accuracy}</strong>. Good job!`,
 
     popupImgEl.setAttribute("src", imagePath);
-    popupTitleEl.innerHTML = title;
-    popupTextEl.innerHTML = text;
+    popupTitleEl.innerText = title;
+    uptitleText.innerText = uptitle;
+    speedNum.innerText = wpm;
+    accuracyNum.innerText = accuracy;
+    timeNum.innerText = GetFormattedTime(secondsRemain);
+}
+
+function GetFormattedTime(seconds) {
+    min = Math.floor(seconds / 60)
+    secs = seconds - min * 60
+
+    return `${GetFormattedNum(min)}:${GetFormattedNum(secs)}`
+}
+
+function GetFormattedNum(num) {
+    if(num < 10){
+        return "0" + num
+    } 
+
+    return num
 }
 
 function OpenPopup() {
@@ -331,4 +377,6 @@ function IsCapslockOn(e) {
     return e.getModifierState('CapsLock')
 }
 
+inputZone.focus();
+MakeTypingCoursorBlink();
 Init();

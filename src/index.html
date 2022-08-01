@@ -180,26 +180,40 @@
         <div class="endgame-popup__background"></div>
         <div class="endgame-popup__wrapper">
             <div class="endgame-popup__main-container">
-                <img src="#" alt="endgame image" class="endgame-popup__image">
+                <img width="330" height="345" src="./img/Tiger.png" alt="endgame image" class="endgame-popup__image">
                 <div class="main-container__content">
-                    <h2 class="endgame-popup__title"></h2>
-                    <p class="endgame-popup__text">
-                    </p>
+                    <p class="endgame-popup__uptitle"></p>
+                    <h2 class="endgame-popup__title">Your speed resembles <span></span></h2>
+
+                    <div class="endgame-popup__scores">
+                        <div class="scores__score">
+                            <p>Speed</p>
+                            <p><span id="endgame-popup__speed-score"></span>WPM</p>
+                        </div>
+
+                        <div class="scores__score">
+                            <p>Accuracy</p>
+                            <p><span id="endgame-popup__accuracy-score"></span>%</p>
+                        </div>
+
+                        <div class="scores__score">
+                            <p>Time Taken</p>
+                            <p><span id="endgame-popup__time-score"></span></p>
+                        </div>
+                    </div>
                     
                     <div class="endgame-popup__share">
                         <p class="share__title">
-                            <strong>
-                                Share your score
-                            </strong>
+                            Share your score
                         </p>
                         <a href="#">
-                            <img width="69" height="68" src="./img/facebook-ico.png" alt="share on facebook">
+                            <img width="49" height="48" src="./img/facebook-ico.png" alt="share on facebook">
                         </a>
                         <a href="#">
-                            <img width="69" height="68" src="./img/linkedin-ico.png" alt="share on linkedin">
+                            <img width="49" height="48" src="./img/linkedin-ico.png" alt="share on linkedin">
                         </a>
                         <a href="#">
-                            <img width="69" height="68" src="./img/twitter-ico.png" alt="share on twitter">
+                            <img width="49" height="48" src="./img/twitter-ico.png" alt="share on twitter">
                         </a>
                     </div>
                 </div>
@@ -210,7 +224,7 @@
             </div>
     
             <button id="endgame-popup__close">
-                <img width="50" height="50" src="./img/close.png" alt="close">
+                <img width="45" height="45" src="./img/close.png" alt="close">
             </button>
         </div>
         
@@ -219,6 +233,7 @@
 
     @@include("./partials/footer.html")
     <script src="./script.js" defer></script>
+    <script src="./howler.js"></script>
     <script src="./speed-typing-script.js"></script>
     <script src="./chart.min.js"></script>
     <script src="./chart.js"></script>
