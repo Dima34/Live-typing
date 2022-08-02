@@ -145,12 +145,14 @@ main {
     text-align: center;
     margin-top: 28px;
     margin-bottom: 15px;
+    font-weight: 900;
 }
 
 .game__subtitle {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 60px;
+    letter-spacing: 4px;
 }
 
 .game__counters {
@@ -358,6 +360,7 @@ main {
 
     span{
         font-size: 42px;
+        font-weight: 900;
     }
 }
 
@@ -852,14 +855,22 @@ footer .wrapper {
         text-align: center;
     }
 
-    .endgame-popup__share,
-    .endgame-popup__text {
+    .endgame-popup__share {
         padding-left: 0;
         text-align: center;
     }
 
     .endgame-popup__share {
         margin: 0 auto;
+    }
+
+    .endgame-popup__uptitle{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-container__content{
+        padding: 0;
     }
 
     .share__title {
@@ -977,16 +988,6 @@ footer .wrapper {
         line-height: 1.1;
     }
 
-    .endgame-popup__text {
-        font-size: 20px;
-        letter-spacing: 0.5px;
-        line-height: 38px;
-
-        .red-label {
-            font-size: 20px;
-        }
-    }
-
     .button {
         padding: 10px 22px;
         font-size: 20px;
@@ -1014,8 +1015,29 @@ footer .wrapper {
         }
     }
 
-    .endgame-popup__text {
-        margin-bottom: 20px;
+    .endgame-popup__share{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        justify-items: center;
+
+        p:first-child{
+            grid-column: 1/4;
+        }
+    }
+
+    .endgame-popup__scores{
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .scores__score{
+        margin: 20px 20px;
+
+        p{
+            text-align: center;
+        }
     }
 
     .chart__wrapper{

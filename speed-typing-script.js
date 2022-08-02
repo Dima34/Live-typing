@@ -87,7 +87,6 @@ function SetRendomTextPlace() {
 
     if(randomPlaceIndex < 120){
         needToType = splittedTextLine.slice(randomPlaceIndex).join(" ") + " " + splittedTextLine.join(" ");
-        console.log("low amount");
     }else{
         needToType = splittedTextLine.slice(randomPlaceIndex).join(" ");
     }
