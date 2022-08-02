@@ -15,17 +15,17 @@ const typingIndicator = document.getElementById("startTypingIndicator");
 const capsLockIndicator = document.getElementById("capsLockAlert");
 const circleTimeCounter = document.getElementById("circleTimeCounter");
 
-const typingSound = new Howl({
-    src:["./sounds/typing.mp3"],
-    volume: 0.5,
-})
-const wrongSound = new Howl({
-    src:["./sounds/wrong.mp3"],
-    volume: 0.5,
-})
-const clockTicking = new Howl({
-    src:["./sounds/clock_ticking.mp3"],
-})
+// const typingSound = new Howl({
+//     src:["./sounds/typing.mp3"],
+//     volume: 0.5,
+// })
+// const wrongSound = new Howl({
+//     src:["./sounds/wrong.mp3"],
+//     volume: 0.5,
+// })
+// const clockTicking = new Howl({
+//     src:["./sounds/clock_ticking.mp3"],
+// })
 
 coursor.classList.add("deactivate");
 
@@ -103,7 +103,7 @@ function TickTime() {
 
 function HandleTimeOverSound() {
     if(secondsToEnd <= 10)
-    clockTicking.play();
+    // clockTicking.play();
 }
 
 
@@ -129,7 +129,7 @@ function CheckForStart() {
 function StartTypingSequence() {
     inputZone.addEventListener("input", (e)=>{
         CheckForStart();
-        typingSound.play();
+        // typingSound.play();
 
         let charArr = e.data.split("");
         let charArrLength = charArr.length;
@@ -143,7 +143,7 @@ function StartTypingSequence() {
             CorrectWordSequence();
         } else{
             wrongChars ++;
-            wrongSound.play();
+            // wrongSound.play();
         }
 
         VisualizeCounters();
