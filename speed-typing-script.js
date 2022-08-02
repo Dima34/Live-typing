@@ -130,10 +130,12 @@ function CheckForStart() {
 function StartTypingSequence() {
     inputZone.addEventListener("input", (e)=>{
         CheckForStart();
-        e.target.value = "";
         typingSound.play();
 
-        let inputCharCode = e.data.charCodeAt(0);
+        let charArr = e.data.split("");
+        let charArrLength = charArr.length;
+
+        let inputCharCode = charArr[charArrLength - 1].charCodeAt(0));
 
         if(inputCharCode === GetNextCharCode()){
             CorrectWordSequence();
