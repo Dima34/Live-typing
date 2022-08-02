@@ -959,6 +959,10 @@ footer .wrapper {
   .endgame-popup__footer {
     padding: 20px;
   }
+
+  .game__subtitle {
+    letter-spacing: 1px;
+  }
 }
 @media screen and (max-width: 650px) {
   h1,
