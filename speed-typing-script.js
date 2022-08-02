@@ -96,7 +96,6 @@ function TickTime() {
     secondsToEnd--;
     secondsFromStart++;
     
-    
     HandleTimeOverSound();
     VisualizeCounters();
     CheckForEnd();
@@ -344,10 +343,12 @@ function GetFormattedNum(num) {
 }
 
 function OpenPopup() {
+    body.classList.add("scroll-lock");
     endPopup.classList.add("active");
 }
 
 function ClosePopup() {
+    body.classList.remove("scroll-lock");
     endPopup.classList.remove("active");
 }
 

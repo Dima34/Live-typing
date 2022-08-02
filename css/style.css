@@ -118,6 +118,10 @@ a {
   overflow: hidden;
 }
 
+.scroll-lock {
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1330px;
   padding: 0 15px;
@@ -378,36 +382,31 @@ main {
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   left: 0;
   top: 0;
   z-index: 2;
   opacity: 0;
+  overflow: scroll;
   visibility: hidden;
   pointer-events: none;
-  padding: 15px;
-  padding-top: 100px;
+  padding: 100px 15px;
   overflow: auto;
+}
+.endgame-popup::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .endgame-popup.active {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-}
-.endgame-popup.active .endgame-popup__background {
-  display: block;
-}
-
-.endgame-popup__background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
 }
 
 .endgame-popup__wrapper {
@@ -417,13 +416,22 @@ main {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  height: fit-content;
 }
 
 .endgame-popup__main-container {
-  display: flex;
+  display: grid;
   background: var(--white);
   padding: 50px 50px 40px 20px;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
   background-color: #f6f6f7;
+  column-gap: 20px;
+}
+
+.endgame-popup__image {
+  grid-column: 1/2;
+  grid-row: 1/3;
 }
 
 .endgame-popup__uptitle {
@@ -452,7 +460,6 @@ main {
 }
 
 .main-container__content {
-  padding-left: 20px;
   width: 100%;
 }
 
@@ -908,10 +915,6 @@ footer .wrapper {
     text-align: right;
   }
 
-  .endgame-popup__image {
-    display: none;
-  }
-
   .endgame-popup__title {
     text-align: center;
   }
@@ -939,7 +942,18 @@ footer .wrapper {
   }
 
   .endgame-popup__main-container {
+    grid-template-columns: 1fr;
     padding: 90px 30px 30px 30px;
+  }
+
+  .endgame-popup__image {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 330px;
+    width: 100%;
+    height: auto;
   }
 
   .endgame-popup__footer {
@@ -1091,6 +1105,10 @@ h3 {
 
   .chart__wrapper {
     margin-top: 50px;
+  }
+
+  .endgame-popup {
+    padding-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
