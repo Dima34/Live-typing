@@ -137,6 +137,9 @@ function StartTypingSequence() {
 
         let inputCharCode = charArr[charArrLength - 1].charCodeAt(0);
 
+        console.log(inputCharCode);
+        console.log(GetNextCharCode());
+
         if(inputCharCode === GetNextCharCode()){
             CorrectWordSequence();
         } else{
