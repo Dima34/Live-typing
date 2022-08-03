@@ -183,7 +183,7 @@ function VisualizeCounters() {
 
     // wpm = GetCorrectNum(GetUnitPerMin(wordsCount, secondsFromStart));
     cpm = GetCorrectNum(GetUnitPerMin(correctChars, secondsFromStart));
-    wpm = GetCorrectNum(cpm / 5);
+    wpm = GetCorrectNum(Math.round(cpm / 5));
     accuracy = GetCorrectNum(Math.round(100 -(wrongChars * 100 / correctChars)))
 
     wordsMinCounter.innerText = wpm;
