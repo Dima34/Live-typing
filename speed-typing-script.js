@@ -123,13 +123,15 @@ function CheckForStart() {
     if(isStarted == false){
         HideTypingIndicator();
         isStarted = true;
+        AddAddThisScript()
         secondsToEnd = secondsRemain;
         intervalId = setInterval(TickTime, 1000);
     }
 }
 
 function AddAddThisScript() {
-    body.innerHTML += `<script defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62e91537dc2e94c0"></script>`
+    let addThisScriptTag = document.getElementById("addThisDelayed");
+    addThisScriptTag.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62e91537dc2e94c0"
 }
 
 function StartTypingSequence() {
@@ -141,9 +143,6 @@ function StartTypingSequence() {
         let charArrLength = charArr.length;
 
         let inputCharCode = charArr[charArrLength - 1].charCodeAt(0);
-
-        console.log(inputCharCode);
-        console.log(GetNextCharCode());
 
         if(inputCharCode === GetNextCharCode()){
             CorrectWordSequence();
