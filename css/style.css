@@ -601,6 +601,30 @@ main {
   display: flex;
 }
 
+.at-share-btn {
+  margin: 0 !important;
+  border: 2px solid black !important;
+}
+
+.at-icon-wrapper {
+  height: 48px !important;
+  width: 48px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.at-icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.at-share-btn-elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
 @keyframes pulse {
   0% {
     transform: translateY(0) translateX(-50%);
@@ -1113,6 +1137,10 @@ h3 {
 
   .endgame-popup {
     padding-bottom: 0;
+  }
+
+  .addthis_inline_share_toolbox {
+    grid-column: 1/4;
   }
 }
 /*# sourceMappingURL=style.css.map */
