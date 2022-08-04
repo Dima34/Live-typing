@@ -130,8 +130,9 @@ function CheckForStart() {
 }
 
 function AddAddThisScript() {
-    let addThisScriptTag = document.getElementById("addThisDelayed");
-    addThisScriptTag.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62e91537dc2e94c0"
+    let script = document.createElement('script');
+    script.src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62e91537dc2e94c0";
+    document.getElementsByTagName('head')[0].appendChild(script);""
 }
 
 function StartTypingSequence() {
