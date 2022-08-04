@@ -128,6 +128,10 @@ function CheckForStart() {
     }
 }
 
+function AddAddThisScript() {
+    body.innerHTML += `<script defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62e91537dc2e94c0"></script>`
+}
+
 function StartTypingSequence() {
     inputZone.addEventListener("input", (e)=>{
         CheckForStart();
