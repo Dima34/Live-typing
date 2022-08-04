@@ -184,7 +184,8 @@
                 <div class="main-container__content">
                     <h2 class="endgame-popup__title">Your speed resembles <span></span></h2>
 
-                    <div class="endgame-popup__scores">
+                    <div class="addthis_inline_share_toolbox"></div>
+                    <!-- <div class="endgame-popup__scores">
                         <div class="scores__score">
                             <p>Speed</p>
                             <p><span id="endgame-popup__speed-score"></span>WPM</p>
@@ -199,17 +200,13 @@
                             <p>Time Taken</p>
                             <p><span id="endgame-popup__time-score"></span></p>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <div class="endgame-popup__share">
                         <p class="share__title">
                             Share your score
                         </p>
-                        <div class="fb-share-button" 
-                        data-href="https://www.your-domain.com/your-page.html" 
-                        data-layout="button_count">
-                        </div>
-                        <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[title]=Example Title&p[summary]=Example description text&p[url]=http://url-being-shared.com"
+                        <a href="#"
                         >
                             <img width="49" height="48" src="./img/facebook-ico.webp" alt="share on facebook">
                         </a>
@@ -237,21 +234,13 @@
 
     @@include("./partials/footer.html")
     <script src="./script.js" defer></script>
+    <script type="text/javascript" defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-62e91537dc2e94c0"></script>
     <script src="./howler.js" defer></script>
     <script src="./speed-typing-script.js" defer></script>
     <script src="./chart.min.js" defer></script>
     <script src="./chart.js" defer></script>
     
 
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 </html>
