@@ -540,13 +540,15 @@ main {
 }
 
 .button {
-  background: var(--black);
+  background: var(--red);
   border: 10px;
-  padding: 13px 45px;
+  padding: 10px 35px;
   color: var(--white);
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 46px;
   display: block;
   margin: 0 auto;
+  font-weight: 600;
   border-radius: 10px;
 }
 .button:hover {
@@ -587,7 +589,7 @@ main {
 #capsLockAlert {
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: -30px;
   display: flex;
   align-items: center;
   gap: 5px;
