@@ -317,7 +317,7 @@ function FillEndPopup(){
     } else if(wpm < 65)
     {
         uptitle = "Imressive!"
-        title = "Lion",
+        title = "Tiger",
         imagePath  = "./img/Tiger.webp"
     } else
     {
