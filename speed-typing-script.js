@@ -50,6 +50,7 @@ let isTimeSoundPlay = false;
 let timeSoundId;
 
 function Init() {
+    RemoveListeners();
     SetDefaultValues();
     SetRendomTextPlace();
     VisualizeText();
@@ -59,6 +60,10 @@ function Init() {
     HandleEndPopupControlls();
     ShowTypingIndicator();
     CheckForCapsLock();
+}
+
+function RemoveListeners() {
+    inputZone.removeEventListener("input", TypingCheck);
 }
 
 function Destroy() {
@@ -85,11 +90,7 @@ function SetRendomTextPlace() {
     // Get random place in text
     let randomPlaceIndex = Math.round(Math.random() * splittedTextLine.length);
 
-    if(randomPlaceIndex < 120){
-        needToType = splittedTextLine.slice(randomPlaceIndex).join(" ") + " " + splittedTextLine.join(" ");
-    }else{
-        needToType = splittedTextLine.slice(randomPlaceIndex).join(" ");
-    }
+    needToType = splittedTextLine.slice(randomPlaceIndex).join(" ") + " " + splittedTextLine.join(" ");
 }
 
 function TickTime() {
@@ -104,7 +105,6 @@ function TickTime() {
 function HandleTimeOverSound() {
     if(secondsToEnd <= 10){
         clockTicking.play();
-
     }
 }
 
@@ -136,24 +136,29 @@ function AddAddThisScript() {
 }
 
 function StartTypingSequence() {
-    inputZone.addEventListener("input", (e)=>{
-        CheckForStart();
-        typingSound.play();
+    inputZone.addEventListener("input", TypingCheck);
+}
 
-        let charArr = e.data.split("");
-        let charArrLength = charArr.length;
+function TypingCheck(e) {
+    CheckForStart();
+    typingSound.play();
 
-        let inputCharCode = charArr[charArrLength - 1].charCodeAt(0);
+    let charArr = e.data.split("");
+    let charArrLength = charArr.length;
 
-        if(inputCharCode === GetNextCharCode()){
-            CorrectWordSequence();
-        } else{
-            wrongChars ++;
-            wrongSound.play();
-        }
+    let inputCharCode = charArr[charArrLength - 1].charCodeAt(0);
 
-        VisualizeCounters();
-    })    
+    console.log(`input - ` + inputCharCode);
+    console.log(`next - ` + GetNextCharCode());
+
+    if(inputCharCode == GetNextCharCode()){
+        CorrectWordSequence();
+    } else{
+        wrongChars ++;
+        wrongSound.play();
+    }
+
+    VisualizeCounters();
 }
 
 
@@ -274,8 +279,10 @@ function MakeTypingCoursorBlink() {
 
 function HandleEndPopupControlls(){
     restartButton.addEventListener("click", ()=>{
-        ClosePopup();
-        Init();
+        // ClosePopup();
+        // Init();
+        // FocusOnInputZone();
+        location.reload();
     })
 
     closeButton.addEventListener("click", ()=>{
@@ -390,6 +397,10 @@ function IsCapslockOn(e) {
     return e.getModifierState('CapsLock')
 }
 
-inputZone.focus();
-MakeTypingCoursorBlink();
+function FocusOnInputZone() {
+    inputZone.focus();
+    MakeTypingCoursorBlink();
+}
+
+FocusOnInputZone()
 Init();
