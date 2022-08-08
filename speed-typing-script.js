@@ -286,8 +286,10 @@ function HandleEndPopupControlls(){
     })
 
     closeButton.addEventListener("click", ()=>{
-        ClosePopup();
-        Init();
+        // ClosePopup();
+        // Init();
+
+        location.reload();
     })
 }
 
