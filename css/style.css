@@ -540,15 +540,13 @@ main {
 }
 
 .button {
-  background: var(--red);
+  background: var(--black);
   border: 10px;
-  padding: 10px 35px;
+  padding: 13px 45px;
   color: var(--white);
-  font-size: 24px;
-  line-height: 46px;
+  font-size: 20px;
   display: block;
   margin: 0 auto;
-  font-weight: 600;
   border-radius: 10px;
 }
 .button:hover {
@@ -596,7 +594,7 @@ main {
   display: none;
 }
 #capsLockAlert p {
-  color: #ffd000;
+  color: #ffbb00;
 }
 
 #capsLockAlert.active {
